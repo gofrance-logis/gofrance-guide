@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고프랑 짐보관 이용안내</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap');
+:root {
+  --color-bg: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-text: #201e1d;
+  --color-divider: color-mix(in srgb, #201e1d 40%, transparent);
+  --color-neutral-100: #f8f4f4; --color-neutral-200: #eae7e7; --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6; --color-neutral-500: #9b9797; --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d; --color-neutral-800: #444141; --color-neutral-900: #2d2b2b;
+  --color-accent-100: #fff2ef; --color-accent-200: #ffe0d9; --color-accent-300: #ffc4b8;
+  --color-accent-400: #ff9783; --color-accent-500: #ff563c; --color-accent-600: #dd2b0f;
+  --color-accent-700: #ae1800; --color-accent-800: #7c1405; --color-accent-900: #4d170e;
+  --font-heading: "Archivo", system-ui, sans-serif;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --radius-md: 0px;
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin:0; background:var(--color-bg); color:var(--color-text); font-family:var(--font-body); font-size:15px; line-height:1.55; }
+a { color: var(--color-accent-700); text-underline-offset:3px; }
+a:hover { color: var(--color-accent-900); }
+img { display:block; max-width:100%; }
+:focus { outline:none; }
+:focus-visible { outline:2px solid var(--color-accent-500); outline-offset:2px; }
+::selection { background: color-mix(in srgb, var(--color-accent-500) 30%, transparent); }
+.hr { height:2px; border:0; margin:16px 0; background:var(--color-divider); }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:6px; cursor:pointer; text-decoration:none;
+  font-family:var(--font-heading); font-weight:800; font-size:14px; line-height:1.2; color:var(--color-text);
+  background:transparent; border:1px solid transparent; padding:8px 14.4px; border-radius:var(--radius-md); }
+.btn-primary { background:var(--color-accent-500); color:var(--color-bg); }
+.btn-primary:hover { background:var(--color-accent-600); }
+.btn-primary:active { background:var(--color-accent-700); }
+.btn-block { width:100%; margin-top:8px; justify-content:center; text-align:center; }
+.card { display:flex; flex-direction:column; gap:8px; padding:12px; border-radius:var(--radius-md); background:var(--color-surface); }
+.card-kicker { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-accent-500); }
+.card-title { font-family:var(--font-heading); font-weight:800; font-size:17px; line-height:1.2; }
+.card-body { margin:0; font-size:13px; opacity:0.8; flex:1; }
+.elev-sm { box-shadow: var(--shadow-sm); }
+.tag { display:inline-flex; align-items:center; font-size:11px; letter-spacing:0.02em; padding:3px 10px; border-radius:0; }
+.tag-accent { background:var(--color-accent-100); color:var(--color-accent-800); }
+.table { width:100%; border-collapse:collapse; font-size:14px; }
+.table th { text-align:left; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 60%, transparent); padding:8px; border-bottom:2px solid var(--color-divider); }
+.table td { padding:8px; border-bottom:1px solid var(--color-divider); }
+.step-num { font-family:var(--font-heading); font-weight:700; font-size:28px; line-height:1; color:var(--color-accent-500); }
+.tabbtn { flex:1; padding:14px 8px; background:transparent; border:none; border-bottom:3px solid transparent; font-family:var(--font-heading); font-weight:700; font-size:13px; cursor:pointer; color:var(--color-neutral-700); text-align:center; }
+.tabbtn.active { border-bottom-color:var(--color-accent-500); color:var(--color-text); }
+.tabpanel { display:none; }
+.tabpanel.active { display:flex; }
+</style>
+</head>
+<body>
+<div style="max-width:640px;margin:0 auto;min-height:100vh;background:var(--color-bg);display:flex;flex-direction:column">
+  <div style="padding:28px 20px 20px;border-bottom:2px solid var(--color-divider)">
+    <div style="font-family:var(--font-heading);font-weight:700;font-size:14px;letter-spacing:0.04em;color:var(--color-accent-500);text-transform:uppercase">GOFRAN STORAGE</div>
+    <div style="font-family:var(--font-heading);font-weight:700;font-size:30px;line-height:1.15;margin-top:6px">짐보관 이용안내</div>
+    <div style="font-size:15px;color:var(--color-neutral-700);margin-top:10px;line-height:1.5">파리 6구에서 운영됩니다.</div>
+  </div>
+
+  <div style="margin:20px 20px 0;background:var(--color-accent-500);color:#fff;padding:18px 20px;display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span style="font-family:var(--font-heading);font-weight:700;font-size:17px">예약 방문제로 운영됩니다</span>
+    </div>
+    <div style="font-size:13.5px;line-height:1.5;opacity:0.92">Sur rendez-vous uniquement · 방문 전 꼭 예약해 주세요.</div>
+    <div style="height:1px;background:rgba(255,255,255,0.35)"></div>
+    <div style="display:flex;justify-content:space-between;font-size:14px;line-height:1.7">
+      <span style="opacity:0.85">운영시간 · Horaires</span>
+      <span style="text-align:right"><b>하절기</b> 8:00–20:00<br><b>동절기</b> 9:00–18:00</span>
+    </div>
+  </div>
+
+  <div style="padding:28px 20px 60px;display:flex;flex-direction:column;gap:32px">
+
+
+    <div>
+      <div style="font-family:var(--font-heading);font-weight:700;font-size:20px;margin-bottom:14px">짐보관, 이럴 때 이용하세요</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;background:var(--color-neutral-100);padding:10px 12px"><span style="color:var(--color-accent-700);font-weight:700;flex:none">✓</span><span style="color:var(--color-text)">여행 중 지역이동·국가이동 시 캐리어·짐을 맡기고 싶을 때</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;background:var(--color-neutral-100);padding:10px 12px"><span style="color:var(--color-accent-700);font-weight:700;flex:none">✓</span><span style="color:var(--color-text)">유학생활 끝나고 여행 후 귀국 시 짐 맡길 곳이 필요할 때</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;background:var(--color-neutral-100);padding:10px 12px"><span style="color:var(--color-accent-700);font-weight:700;flex:none">✓</span><span style="color:var(--color-text)">정기적인 패션위크 참석 시 옷걸이나 기본용품을 매번 들고 오시기 번거로울 때<br><span style="font-size:13.5px;color:var(--color-neutral-700)">보관 후 패션위크 장소와 때에 맞춰 배송 및 재픽업 가능</span></span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;background:var(--color-neutral-100);padding:10px 12px"><span style="color:var(--color-accent-700);font-weight:700;flex:none">✓</span><span style="color:var(--color-text)">프랑스에서 공부가 끝나고 몇 개월 후 다른 국가에서 새 학기를 시작할 때<br><span style="font-size:13.5px;color:var(--color-neutral-700)">짐보관 후 타국으로 배송 가능</span></span></div>
+      </div>
+      <div style="font-size:14px;color:var(--color-neutral-700);line-height:1.6;margin-top:12px">그 외 여러 가지 이유로 하루~장기 짐보관이 필요할 때 이용하실 수 있어요.</div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div>
+      <div style="font-family:var(--font-heading);font-weight:700;font-size:20px;margin-bottom:16px">방문 절차</div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+
+        <div style="display:flex;gap:16px">
+          <div class="step-num">1</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:16px;margin-bottom:6px">짐보관 가격 확인</div>
+            <div style="font-size:14.5px;color:var(--color-neutral-700);line-height:1.6;margin-bottom:10px">아래에서 요금을 먼저 확인해 주세요. <a href="https://gofran.co.kr/Stokage-Service" target="_blank">가격표 자세히 보기 →</a></div>
+            <table class="table" style="width:100%;font-size:13.5px">
+              <thead><tr><th>캐리어 크기</th><th>당일~10일</th><th>1개월</th><th>2개월</th><th>3개월</th></tr></thead>
+              <tbody>
+                <tr><td>28인치 미만</td><td>20€</td><td>30€</td><td>55€</td><td>75€</td></tr>
+                <tr><td>28인치 이상</td><td>30€</td><td>40€</td><td>75€</td><td>90€</td></tr>
+              </tbody>
+            </table>
+            <div style="font-size:12.5px;color:var(--color-neutral-700);margin-top:6px">당일(몇 시간만 맡기는 경우)도 1~10일과 동일한 요금이 적용돼요.</div>
+            <div class="card elev-sm" style="margin-top:12px">
+              <div class="card-kicker">꼭 확인해 주세요 · Important</div>
+              <div class="card-body" style="font-size:13.5px;line-height:1.6">
+                박스 기준은 가로·세로·높이 각 최대 50cm(50×50×50)예요.<br>
+                사이즈·무게가 기준보다 크거나 무거우면 상당 금액이 달라질 수 있어요.<br>
+                보관 기간은 맡긴 날부터 1일차로 계산됩니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px">
+          <div class="step-num">2</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:16px;margin-bottom:6px">짐보관 신청서 작성</div>
+            <div style="font-size:14.5px;color:var(--color-neutral-700);line-height:1.6;margin-bottom:10px">아래 버튼을 눌러 신청서를 작성해 주세요.<br>작성 후에는 <b>카카오톡</b>으로 알려주세요.</div>
+            <a class="btn btn-primary" href="https://gofran.co.kr/Booking?svc=storage" target="_blank" style="display:inline-flex;text-decoration:none">짐보관 신청서 작성하기 →</a>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px">
+          <div class="step-num">3</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:16px;margin-bottom:6px">방문 주소</div>
+            <div style="font-size:14.5px;color:var(--color-neutral-700);line-height:1.6">103 rue du cherche-midi 75006 Paris</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:16px">
+          <div class="step-num">4</div>
+          <div style="flex:1">
+            <div style="font-weight:700;font-size:16px;margin-bottom:6px">셀프 안내 가이드 수령</div>
+            <div style="font-size:14.5px;color:var(--color-neutral-700);line-height:1.6">신청서 작성 후 말씀해 주시면, 짐을 맡기고 가실 수 있도록 셀프 안내 가이드를 보내드려요.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="card elev-sm">
+      <div class="card-kicker">결제방법 · Paiement</div>
+      <div class="card-body" style="font-size:14.5px;line-height:1.6;display:flex;flex-direction:column;gap:14px">
+        <div>
+          <div style="font-weight:700;margin-bottom:3px">한화 송금</div>
+          <div>우리은행 1005-603-190807</div>
+          <div>(주)고프랑인터내셔널</div>
+          <div style="color:var(--color-neutral-700);font-size:13.5px;margin-top:5px">한화는 당일 구매환율이 적용됩니다.</div>
+        </div>
+        <div>
+          <div style="font-weight:700;margin-bottom:3px">유로 송금</div>
+          <div>카카오톡으로 안내 요청 바랍니다.</div>
+        </div>
+        <div style="border-top:1px solid var(--color-divider);padding-top:12px">
+          트래블월렛 · 트래블로그 · 솔트래블 가능
+        </div>
+      </div>
+    </div>
+
+    <a href="http://pf.kakao.com/_qMxfxjn/chat" target="_blank" class="btn btn-primary btn-block" style="text-decoration:none;text-align:center;justify-content:center">카카오톡 채널로 문의하기 →</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
