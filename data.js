@@ -93,7 +93,7 @@ window.GX = (function(){
     return '<div class="postit" aria-label="박스 포스트잇 작성 예시"><span class="ex">박스 예시</span><b>국제배송</b><dl><dt>이름</dt><dd>홍길동</dd><dt>박스</dt><dd>사용한 박스 또는 크기<br><span class="e">예) 10kg 박스 / 50·33·29</span></dd><dt>무게</dt><dd>계측한 무게<br><span class="e">예) 8.4 kg</span></dd><dt>결제</dt><dd>한화 · 유로 · 앱 송금 중 하나</dd></dl></div>';
   }
   function postitCarrier(){
-    return '<div class="postit" aria-label="캐리어 포스트잇 작성 예시"><span class="ex">캐리어 예시</span><b>국제배송 · 캐리어</b><dl><dt>이름</dt><dd>홍길동</dd><dt>크기</dt><dd>캐리어 크기<br><span class="e">예) 28인치</span></dd><dt>무게</dt><dd>잰 무게<br><span class="e">예) 21.3 kg</span></dd><dt>결제</dt><dd>한화 · 유로 · 앱 송금 중 하나</dd></dl></div>';
+    return '<div class="postit" aria-label="캐리어 포스트잇 작성 예시"><span class="ex">캐리어 예시</span><b>국제배송 · 캐리어</b><dl><dt>이름</dt><dd>홍길동</dd><dt>크기</dt><dd>가로·세로·높이 (cm)<br><span class="e">예) 48·30·76</span></dd><dt>무게</dt><dd>잰 무게<br><span class="e">예) 21.3 kg</span></dd><dt>결제</dt><dd>한화 · 유로 · 앱 송금 중 하나</dd></dl></div>';
   }
   function postit(){
     return '<figure class="pfig"><div class="postits">'+postitBox()+postitCarrier()+'</div><figcaption>예시 그대로 적지 말고, 내 박스·무게·결제 방법을 적어 주세요.</figcaption><div class="appay"><b>앱 송금</b><span>트래블월렛 · 트래블로그 · 쏠트래블</span></div></figure>';
