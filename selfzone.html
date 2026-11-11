@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>고프랑 셀프존 가이드</title>
+<meta name="description" content="파리 6구 고프랑 셀프존에서 국제배송 박스를 직접 포장하는 방법을 사진으로 안내해요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="고프랑 GoFrance">
+<meta property="og:title" content="고프랑 셀프존 가이드">
+<meta property="og:description" content="오는 법 · 박스포장하는 법 · 마무리하는 법을 사진으로 안내해요.">
+<meta property="og:url" content="https://gofrance-logis.github.io/gofrance-guide/selfzone.html">
+<meta property="og:image" content="https://gofrance-logis.github.io/gofrance-guide/img/og.jpg">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Parisienne&display=swap">
+<link rel="stylesheet" href="base.css">
+<style>
+/* Layout: a front page (three points, before-visit checklist, three guide tiles) that opens one detail screen at a time; steps are a ruled numbered flow; the site's 6px tricolor band under the header; one-line bottom menu. */
+.band{height:6px;display:flex;margin-top:14px}.band i{flex:1}.band i:nth-child(1){background:var(--bleu)}.band i:nth-child(2){background:#fff;box-shadow:inset 0 0 0 1px var(--line)}.band i:nth-child(3){background:var(--rouge)}
+.view{padding-block:20px 12px;display:grid;gap:24px}
+.vh{display:grid;gap:6px}
+.vh h1{font-size:1.55rem}
+.vh p{color:var(--mute);font-size:.93rem}
+.home-link{font-size:.85rem;color:var(--mute);text-decoration:none;justify-self:start;min-height:32px;display:inline-flex;align-items:center}
+.sec-t{font-family:var(--f-fr);letter-spacing:.22em;text-transform:uppercase;font-size:.75rem;color:var(--mute);margin-bottom:-14px}
+
+/* three points */
+.three{margin:0;padding:0;list-style:none;border-top:1px solid var(--ink)}
+.three li{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.three .num{font:600 1.7rem/1 var(--f-fr);font-style:italic}
+.three li:nth-child(1) .num{color:var(--bleu)}.three li:nth-child(3) .num{color:var(--rouge)}
+.three b{display:block;font-size:.98rem;line-height:1.4}
+.three p{font-size:.85rem;color:var(--mute);margin-top:2px}
+
+/* checklists */
+.check{border-radius:14px;padding:16px 16px 6px;background:var(--tint);border:1px solid color-mix(in srgb,var(--c) 22%,transparent);display:grid;gap:4px}
+.check .ch{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.check h2{font-size:1.15rem}
+.check .count{font-size:.82rem;font-weight:700;color:var(--c);white-space:nowrap}
+.check ul{list-style:none;margin:6px 0 0;padding:0}
+.check li{border-top:1px solid rgba(0,0,0,.07)}
+.check li:first-child{border-top:0}
+.ci{width:100%;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;text-align:left;background:none;border:0;padding:12px 0 8px;cursor:pointer;font:inherit;color:inherit;min-height:44px}
+.box{width:24px;height:24px;border-radius:6px;border:1.5px solid var(--c);background:#fff;display:grid;place-items:center;margin-top:1px}
+.box svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.ci[aria-pressed="true"] .box{background:var(--c)}
+.ci[aria-pressed="true"] .box svg{opacity:1}
+.ci b{display:block;font-size:.98rem;line-height:1.4;font-weight:600}
+.ci[aria-pressed="true"] b{color:var(--mute)}
+.ci small{display:block;font-size:.84rem;color:var(--mute);margin-top:2px}
+.ci .fr{display:block;font-size:.88rem}
+.cextra{padding:0 0 12px 38px;display:grid;gap:8px}
+.lk{display:inline-flex;align-items:center;gap:6px;justify-self:start;min-height:36px;padding:4px 14px;border-radius:999px;border:1.5px solid var(--c);background:#fff;color:var(--c);font-weight:700;font-size:.85rem;text-decoration:none}
+.lk.solid{background:var(--c);color:#fff}
+.flag-imp{display:inline-block;font-size:.7rem;font-weight:700;color:#fff;background:var(--rouge);border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:2px}
+.check li.imp{background:#fff;border-radius:8px;border:1.5px solid var(--rouge);margin:6px 0;padding:0 10px}
+.check li.imp .box{border-color:var(--rouge)}
+.check li.imp .ci[aria-pressed="true"] .box{background:var(--rouge)}
+.check li.imp .lk{border-color:var(--rouge);color:#fff;background:var(--rouge)}
+.check li.imp+li{border-top:0}
+
+/* guide tiles */
+.tiles{display:grid;gap:10px}
+.tile{display:grid;grid-template-columns:46px 1fr 20px;gap:12px;align-items:center;padding:16px;border-radius:10px;text-decoration:none;color:var(--ink);border-top:4px solid var(--c);background:var(--tint);min-height:84px}
+.tile .tn{font:600 2rem/1 var(--f-fr);font-style:italic;color:var(--c)}
+.tile b{display:block;font-family:var(--f-head);font-size:1.15rem}
+.tile span.d{display:block;font-size:.85rem;color:var(--mute);margin-top:2px}
+.tile .ar{color:var(--c);font-size:1.2rem}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.steps>li{display:grid;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.sh{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start}
+.n{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--bleu);color:var(--bleu);display:grid;place-items:center;font:600 .9rem var(--f-head);margin-top:1px}
+.sh b{display:block;font-family:var(--f-head);font-size:1.06rem;line-height:1.38}
+.sh .fr{display:block;font-size:.9rem}
+.sb{display:grid;gap:12px;padding-left:42px;min-width:0}
+@media (max-width:380px){.sb{padding-left:0}}
+
+/* rate table: popular rows stand out */
+.rate tr.pop td{background:var(--bleu-tint);font-weight:700;color:var(--ink)}
+.rate tr.pop td:first-child{box-shadow:inset 3px 0 0 var(--bleu);padding-left:8px}
+.rate td:first-child{padding-left:8px}
+.rate tr.pop i{font-style:normal;font-size:.68rem;font-weight:700;color:#fff;background:var(--bleu);border-radius:4px;padding:1px 5px;margin-left:4px;vertical-align:1px}
+.rate td:nth-child(2){color:var(--mute);font-size:.82rem}
+.rate tr.pop td:nth-child(2){color:var(--ink)}
+
+/* offer + coffee */
+.offer{display:grid;gap:10px}
+.offer h2{font-size:1.15rem;display:flex;align-items:baseline;gap:10px}
+.offer h2 .fr{font-size:.95rem}
+.offer ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.offer li{background:var(--soft);border-radius:8px;padding:12px;font-size:.88rem;line-height:1.45}
+.offer li b{display:block;font-size:.95rem;margin-bottom:2px}
+.offer li.wide{grid-column:1/-1}
+.offer .ph{max-width:200px}
+.coffee{border-radius:10px;border-top:4px solid var(--rouge);background:var(--rouge-tint);padding:16px;display:grid;gap:8px;--c:var(--rouge)}
+.coffee h3{font-size:1.05rem}
+.coffee p{font-size:.9rem}
+
+.next{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:0 20px;border-radius:999px;background:var(--bleu);color:#fff;text-decoration:none;font-weight:700}
+.bye{text-align:center;display:grid;gap:6px;padding:26px 0 6px;border-top:1px solid var(--line)}
+.bye .logo{font-size:2.4rem}
+.bye b{font-family:var(--f-head);font-size:1.2rem}
+.bye p{color:var(--mute);font-size:.92rem}
+.bye .fr{font-size:1.1rem}
+/* post-it example */
+.pfig{margin:0;display:grid;gap:6px}
+.postit{position:relative;max-width:300px}
+.postit .ex{position:absolute;top:-10px;right:-8px;background:var(--rouge);color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:999px;transform:rotate(3deg)}
+.postit dd .e{font-weight:500;opacity:.75;font-size:.85rem}
+.pfig figcaption{font-size:.82rem;color:var(--rouge);font-weight:600}
+
+/* estimator */
+.calc{border:1.5px solid var(--bleu);border-radius:10px;padding:16px;display:grid;gap:12px;background:#fff}
+.calc h3{font-size:1.05rem;display:flex;align-items:baseline;gap:8px}
+.calc h3 .fr{font-size:.9rem}
+.calc .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.calc label{display:grid;gap:4px;font-size:.78rem;color:var(--mute);font-weight:600}
+.calc input,.calc select{width:100%;min-height:44px;border:1px solid #CFCFCF;border-radius:8px;padding:8px 10px;font:600 1rem var(--f-body);color:var(--ink);background:#fff;font-variant-numeric:tabular-nums}
+.calc input:focus,.calc select:focus{outline:2px solid var(--bleu);outline-offset:0;border-color:var(--bleu)}
+.calc .wide{grid-column:1/-1}
+.calc .two{display:grid;grid-template-columns:1fr 1.4fr;gap:8px}
+.res{background:var(--bleu-tint);border-radius:8px;padding:12px 14px;display:grid;gap:4px;font-variant-numeric:tabular-nums}
+.res .r{display:flex;justify-content:space-between;gap:10px;font-size:.9rem}
+.res .r span:first-child{color:var(--mute)}
+.res .r.on span:last-child{font-weight:700;color:var(--bleu)}
+.res .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,35,149,.2);margin-top:4px;padding-top:8px}
+.res .tot b{font-family:var(--f-head);font-size:1rem}
+.res .tot strong{font-size:1.5rem;color:var(--bleu)}
+.res .empty{font-size:.88rem;color:var(--mute)}
+.warn{display:grid;gap:4px;font-size:.84rem;color:var(--ink)}
+.warn p{padding-left:16px;position:relative}
+.warn p::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--rouge)}
+
+/* snack row */
+.snack{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;background:var(--soft);border-radius:8px;padding:10px}
+.snack img{width:110px;height:110px;object-fit:cover;border-radius:6px}
+.snack b{display:block;font-size:.95rem;margin-bottom:2px}
+.snack p{font-size:.86rem;line-height:1.5}
+.snack .tag{display:block;margin-top:6px;font-size:.82rem;font-weight:700;color:var(--bleu);line-height:1.45;border-left:2px solid var(--bleu);padding-left:8px}
+/* action list (site sketch 04/09 "바로 시작하기" rows) */
+.acts{display:grid}
+.acts-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.acts-h b{font-family:var(--f-head);font-size:1.15rem}
+.act{display:grid;grid-template-columns:44px 1fr 18px;gap:14px;align-items:center;min-height:86px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.act .ai{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--c);display:grid;place-items:center;color:var(--c)}
+.act svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.act .ak{display:block;font-family:var(--f-fr);letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;color:var(--mute)}
+.act b{display:block;font-family:var(--f-head);font-size:1.15rem;line-height:1.3}
+.act .d{display:block;font-size:.85rem;color:var(--mute)}
+.act .ar{color:var(--c);font-size:1.2rem;transition:transform .15s}
+.act:active .ar,.act:hover .ar{transform:translateX(3px)}
+
+/* equal photo pairs */
+.pair .ph{aspect-ratio:3/4;object-fit:cover;height:auto}
+
+/* codes shown in the guide */
+.code{justify-content:space-between}
+.code .ct{font-weight:600;color:var(--bleu)}
+.code .slot{font:700 1.3rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;color:var(--ink);padding:4px 12px}
+
+/* perks hint in step 4 */
+.perks{display:grid;gap:8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0}
+.perks>div{display:grid;grid-template-columns:86px 1fr;gap:10px;align-items:start}
+.perks .pk{font-size:.75rem;font-weight:700;color:var(--bleu);border:1px solid var(--bleu);border-radius:999px;text-align:center;padding:2px 6px;margin-top:2px}
+.perks .pk.cafe-k{color:var(--rouge);border-color:var(--rouge)}
+.perks p{font-size:.88rem}
+.perks small{color:var(--mute);font-size:.78rem}
+
+/* estimator trigger + dialog */
+.ask{display:grid;gap:10px;background:var(--bleu-tint);border-radius:10px;padding:14px 16px}
+.ask p{font-size:.88rem;color:var(--mute)}
+.ask p b{display:block;color:var(--ink);font-family:var(--f-head);font-size:1.02rem;margin-bottom:2px}
+.ask-btn{justify-self:start;min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--bleu);color:#fff;font:700 .95rem var(--f-body);cursor:pointer}
+dialog#calc-dlg{border:0;padding:0;width:min(520px,calc(100vw - 24px));max-height:calc(100vh - 40px);border-radius:14px;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+dialog#calc-dlg::backdrop{background:rgba(10,20,50,.45)}
+dialog#calc-dlg .calc{border:0;border-radius:0;padding-top:20px}
+.dlg-x{position:absolute;top:10px;right:10px;margin:0;z-index:1}
+.dlg-x button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:1.4rem;line-height:1;cursor:pointer;color:var(--ink)}
+.perk-on{margin-top:6px;font-size:.85rem;font-weight:700;color:var(--bleu)}
+.perk-on.cafe{color:var(--rouge)}
+
+/* Go-Café block */
+.cafe{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:14px}
+.cafe-top{display:flex;justify-content:space-between;align-items:center}
+.cafe-main{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.price{font:800 3rem/1 var(--f-body);letter-spacing:-.03em;color:var(--rouge);display:flex;align-items:flex-start;gap:2px;padding-right:16px;border-right:1px solid var(--line)}
+.price span{font-size:1.4rem;margin-top:.35rem}
+.cafe h3{font-size:1.1rem;margin-bottom:4px}
+.cafe-main p{font-size:.88rem;color:var(--mute)}
+.cafe-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cafe-steps li{font-size:.8rem;line-height:1.45;background:var(--rouge-tint);border-radius:8px;padding:10px;display:grid;gap:4px}
+.cafe-steps li span{font:800 .95rem/1 var(--f-body);color:var(--rouge)}
+.cafe-link{justify-self:start;font:700 .9rem var(--f-body);color:var(--rouge);background:none;border:0;border-bottom:1.5px solid var(--rouge);padding:0 0 1px;cursor:pointer;min-height:32px}
+.links{display:flex;gap:8px;flex-wrap:wrap}
+.flag{display:inline-flex;width:24px;height:10px;flex:none}.flag i{flex:1}.flag i:nth-child(1){background:var(--bleu)}.flag i:nth-child(2){background:#fff;box-shadow:inset 0 0 0 1px var(--line)}.flag i:nth-child(3){background:var(--rouge)}
+/* address: text on its own line, two equal buttons below */
+.addrline{display:grid;gap:8px;justify-items:stretch}
+.addrline strong{text-align:center;font-size:.95rem}
+.addr-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.addr-btns .chip{justify-content:center;min-height:40px}
+.chip.solid{background:var(--bleu);color:#fff}
+.chip svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;margin-right:4px}
+/* shared popup */
+dialog#modal{border:0;padding:0;width:min(520px,calc(100vw - 24px));max-height:calc(100vh - 40px);border-radius:16px;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+dialog#modal::backdrop{background:rgba(10,20,50,.45)}
+#modal-body{padding:22px 18px 20px;display:grid;gap:12px}
+#modal-body h2{font-size:1.25rem;padding-right:40px}
+#modal-body h3{font-size:1rem;margin-top:6px}
+.mnote{font-size:.85rem;color:var(--mute)}
+.mwarn{font-size:.85rem;color:var(--rouge);font-weight:500}
+.kv{display:grid;border-top:1px solid var(--ink)}
+.kv div{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.kv b{font-variant-numeric:tabular-nums}
+.mtarget{background:var(--rouge-tint);border-radius:10px;padding:12px 14px;font-size:.9rem}
+.mtarget b{display:block;color:var(--rouge);font-size:.8rem;margin-bottom:2px}
+.msteps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.msteps li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:.88rem;color:var(--mute)}
+.msteps li span{width:28px;height:28px;border-radius:50%;background:var(--rouge);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.msteps li b{display:block;color:var(--ink);font-size:.95rem}
+.mphotos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mphotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;background:var(--soft)}
+.mrate th,.mrate td{padding:7px 8px}
+.mrate th:last-child,.mrate td:last-child{text-align:right}
+.mrate th:first-child,.mrate td:first-child{padding-left:10px}
+.mrate tr.pop td{background:var(--bleu-tint);font-weight:700;color:var(--bleu)}
+.mrate tr.pop td:first-child{box-shadow:inset 3px 0 0 var(--bleu)}
+.mrate tr.pop i{font-style:normal;font-size:.68rem;font-weight:700;color:#fff;background:var(--bleu);border-radius:4px;padding:1px 5px;margin-left:4px;vertical-align:1px}
+.carrier-card{display:grid;grid-template-columns:44px 1fr 18px;gap:12px;align-items:center;width:100%;text-align:left;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;font:inherit;color:inherit;min-height:64px}
+.carrier-card .ci2{width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--bleu);color:var(--bleu);display:grid;place-items:center}
+.carrier-card svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.carrier-card b{display:block;font-size:1rem}
+.carrier-card .d{display:block;font-size:.84rem;color:var(--mute)}
+.carrier-card .ar{color:var(--bleu)}
+.msteps.blue li span{background:var(--bleu)}
+.tbc{background:#FFF3B0;color:var(--ink);padding:0 4px;border-radius:3px;font-weight:600}
+.cnote{display:grid;gap:8px}
+.cnote div{background:var(--bleu-tint);border-radius:10px;padding:10px 12px;font-size:.86rem;color:var(--mute)}
+.cnote b{display:block;color:var(--bleu);font-size:.92rem}
+.howfee{border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:8px;background:#fff}
+.hf-t{font-size:.98rem}
+.hf-row{display:grid;grid-template-columns:96px 1fr;gap:10px;font-size:.88rem;align-items:baseline;padding:6px 0;border-top:1px solid var(--line)}
+.hf-k{font-weight:700;color:var(--mute);font-size:.82rem}
+.hf-on .hf-k{color:var(--bleu)}
+.hf-on{background:var(--bleu-tint);border-radius:8px;padding:8px 10px;border-top:0}
+.hf-ex{display:grid;gap:6px;font-size:.84rem;color:var(--mute)}
+.hf-et{font-size:.75rem;font-weight:700;color:var(--mute)}
+.hf-case{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--soft);border-radius:8px;padding:8px 10px;line-height:1.5}
+.hf-case b{color:var(--ink)}
+.hf-res{text-align:right;white-space:nowrap;font-size:.8rem;color:var(--mute);display:grid}
+.hf-res strong{font-size:1.05rem;color:var(--bleu)}
+.postits{display:flex;flex-wrap:wrap;gap:22px 16px;padding:10px 4px 6px}
+.postits .postit{flex:1 1 220px;max-width:280px}
+.postits .postit:nth-child(2){transform:rotate(1deg)}
+.mpost{padding:12px 4px 4px}
+.mpost .postit{max-width:260px}
+.appay{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:.86rem;background:var(--soft);border-radius:8px;padding:8px 12px}
+.appay b{font-size:.8rem;color:var(--mute)}
+.perks .pk-h{font-weight:700;font-size:.92rem;color:var(--ink)}
+.pk-snack{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center}
+.pk-snack img{width:84px;height:84px;object-fit:cover;border-radius:8px}
+.pk-snack .pk{display:inline-block;margin-bottom:4px}
+.perks>.pk-snack{grid-template-columns:84px 1fr;gap:12px}
+.perks>.pk-cafe{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center}
+.pk-cafe .pk{justify-self:stretch;text-align:center;margin:0}
+#modal-body .ask-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="tri" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="wrap">
+  <div class="top"><a class="logo" href="#" aria-label="gofrance 처음 화면">gofrance</a><div class="meta"><b>셀프존 가이드</b><span class="kicker">Paris 6ᵉ</span></div></div>
+  <div class="addrline"><strong>103 rue du Cherche-Midi, 75006 Paris</strong><span class="addr-btns"><button class="chip" type="button" id="copy">주소 복사</button><a class="chip solid" id="maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=103+rue+du+Cherche-Midi+75006+Paris" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>구글맵 길찾기</a></span></div>
+</header>
+<div class="band wrap" aria-hidden="true" style="padding:0"><i></i><i></i><i></i></div>
+<main class="wrap" id="app"></main>
+<dialog id="modal" aria-labelledby="modal-t"><form method="dialog" class="dlg-x"><button type="submit" aria-label="닫기">×</button></form><div id="modal-body"></div></dialog>
+<script src="data.js"></script>
+<script>
+(function(){
+var G=GUIDE,X=GX,app=document.getElementById('app'),ROMAN=['I','II','III'],checked={};
+var COL={visit:['#002395','#EEF1FA'],pack:['#1A1A1A','#F6F7FA'],exit:['#ED2939','#FDF1F1']};
+try{checked=JSON.parse(localStorage.getItem('gf-self-check')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('gf-self-check',JSON.stringify(checked))}catch(e){}}
+document.body.insertAdjacentHTML('beforeend',X.bottomNav(''));X.toTop();X.copyAddr(document.getElementById('copy'));
+var TICK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>';
+
+function checklist(key,title,items,c,tint){
+  var d=items.filter(function(_,k){return checked[key+k]}).length;
+  return '<section class="check" style="--c:'+c+';--tint:'+tint+'" data-key="'+key+'"><div class="ch"><h2>'+title+'</h2><span class="count">'+d+' / '+items.length+'</span></div><ul>'+
+    items.map(function(it,k){var on=!!checked[key+k];
+      var ex='';
+      if(it.link) ex+='<a class="lk" href="'+it.link+'" target="_blank" rel="noopener">'+X.esc(it.linkT||'바로가기')+' →</a>';
+      if(it.kakao) ex+='<a class="lk solid" href="'+G.kakao+'" target="_blank" rel="noopener">사진 아직이면 카톡으로 보내기 →</a>';
+      if(it.img) ex+=X.photos(it);
+      return '<li'+(it.important?' class="imp"':'')+'><button class="ci" type="button" data-k="'+k+'" aria-pressed="'+on+'"><span class="box">'+TICK+'</span><span><b>'+(it.important?'<span class="flag-imp">중요</span>':'')+X.esc(it.t)+'</b>'+(it.fr?'<span class="fr">'+X.esc(it.fr)+'</span>':'')+'<small>'+X.esc(it.d).replace(/\n/g,'<br>')+'</small></span></button>'+(ex?'<div class="cextra">'+ex+'</div>':'')+'</li>';
+    }).join('')+'</ul></section>';
+}
+function steps(p){
+  return '<ol class="steps">'+p.steps.map(function(s,k){
+    return '<li><div class="sh"><span class="n">'+(k+1)+'</span><span><b>'+X.esc(s.t)+'</b><span class="fr">'+X.esc(s.fr)+'</span></span></div><div class="sb"><p>'+X.esc(s.d).replace(/\n/g,'<br>')+'</p>'+X.extras(s)+X.photos(s)+'</div></li>';
+  }).join('')+'</ol>';
+}
+function offer(o){
+  var cells=[],snack='';
+  o.list.forEach(function(x){var parts=x.split(' · '),t=parts[0],d=parts.slice(1).join(' · ');
+    if(t==='간식 꾸러미'){ var i=d.indexOf('. '); snack='<div class="snack"><img src="img/snacks.webp" alt="Merci GoFrance 태그가 달린 간식 꾸러미" loading="lazy"><div><b>간식 꾸러미</b><p>'+X.esc(d.slice(0,i+1))+'</p><span class="tag">'+X.esc(d.slice(i+2))+'</span></div></div>'; }
+    else cells.push('<li'+(t==='화장실'?' class="wide"':'')+'><b>'+X.esc(t)+'</b>'+X.esc(d)+'</li>');
+  });
+  return '<section class="offer"><h2>'+X.esc(o.t)+' <span class="fr">'+o.fr+'</span></h2>'+snack+'<ul>'+cells.join('')+'</ul></section>';
+}
+function coffee(c){
+  return '<section class="cafe" aria-labelledby="cafe-t"><div class="cafe-top"><span class="kicker">Go-Café · événement</span><span class="flag" aria-hidden="true"><i></i><i></i><i></i></span></div>'+
+    '<div class="cafe-main"><div class="price"><span>€</span>6</div><div><h3 id="cafe-t">'+X.esc(c.t)+'</h3><p>'+X.esc(c.d)+'</p></div></div>'+
+    '<ol class="cafe-steps">'+c.steps.map(function(x,k){return '<li><span>'+(k+1)+'</span>'+X.esc(x)+'</li>'}).join('')+'</ol>'+
+    '<button class="cafe-link" type="button" data-modal="cafe">'+X.esc(c.linkT)+' <span aria-hidden="true">→</span></button></section>';
+}
+function perksHTML(){
+  return '<div class="perks"><p class="pk-h">고프랑이 감사한 마음으로 준비했어요</p>'+
+    '<div class="pk-snack"><img src="img/snacks.webp" alt="Merci GoFrance 태그가 달린 간식 꾸러미" loading="lazy"><div><span class="pk">간식 꾸러미</span><p>1–10kg 박스 · 14kg 미만이면 간식 꾸러미를 드려요.</p></div></div>'+
+    '<div class="pk-cafe"><span class="pk cafe-k">커피 €6</span><p>15kg 이상이면 커피값 €6을 지원해 드려요.</p></div>'+
+    '<small>실제 저울 무게 기준이에요.</small></div>';
+}
+
+function calcHTML(){
+  return '<div class="ask"><p><b>혹시 배송비가 궁금하신가요?</b>계측한 숫자를 넣으면 예상 금액을 볼 수 있어요.</p><button class="ask-btn" type="button" id="open-calc">배송비 예상해보기</button></div>'+
+    '<dialog id="calc-dlg" aria-labelledby="calc-t"><form method="dialog" class="dlg-x"><button type="submit" aria-label="닫기">×</button></form>'+calcBody()+'</dialog>';
+}
+function calcBody(){
+  var opts=G.rates.map(function(r){return '<option value="'+r.kg+'">'+r.kg+'kg 박스'+(r.size?' ('+r.size+')':'')+'</option>'}).join('');
+  return '<section class="calc"><h3 id="calc-t">배송비 예상해보기 <span class="fr">Estimation</span></h3>'+
+    '<label class="wide">사용한 박스<select id="c-box"><option value="">선택해 주세요</option>'+opts+'<option value="own">가져온 박스 (박스값 없음)</option></select></label>'+
+    '<div class="grid"><label>가로 cm<input id="c-l" type="number" inputmode="decimal" min="1" placeholder="50"></label><label>세로 cm<input id="c-w" type="number" inputmode="decimal" min="1" placeholder="33"></label><label>높이 cm<input id="c-h" type="number" inputmode="decimal" min="1" placeholder="29"></label></div>'+
+    '<label class="wide">계측한 무게 kg<input id="c-kg" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="8.4"></label>'+
+    '<div class="res" id="c-res" aria-live="polite"><span class="empty">박스·크기·무게를 넣으면 예상 금액이 나와요.</span></div>'+
+    '<div class="warn"><p>실무게와 부피무게(가로×세로×높이÷5,000) 중 더 큰 쪽으로 계산돼요.</p><p>소수점이 있으면 다음 kg 요금이 적용돼요. 예) 10.1kg → 11kg</p><p>직원이 검수·계측하면서 무게와 금액이 바뀔 수 있어요. 최종 배송비는 실측 후 카톡으로 안내드려요.</p></div></section>';
+}
+function bindCalc(){
+  var box=document.getElementById('c-box'); if(!box) return;
+  var dlg=document.getElementById('calc-dlg'),ob=document.getElementById('open-calc');
+  ob.addEventListener('click',function(){ if(dlg.showModal){dlg.showModal()} else {dlg.setAttribute('open','')} });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+  var L=document.getElementById('c-l'),W=document.getElementById('c-w'),H=document.getElementById('c-h'),K=document.getElementById('c-kg'),R=document.getElementById('c-res');
+  function eur(n){return '€'+(Math.round(n*100)/100).toFixed(n%1?1:0)}
+  function upd(){
+    var l=+L.value,w=+W.value,h=+H.value,kg=+K.value;
+    if(!(l>0&&w>0&&h>0&&kg>0)){R.innerHTML='<span class="empty">박스·크기·무게를 넣으면 예상 금액이 나와요.</span>';return;}
+    var vol=l*w*h/5000, use=Math.max(kg,vol), bill=Math.max(1,Math.ceil(use-1e-9));
+    if(bill>30){R.innerHTML='<span class="empty">'+bill+'kg로 계산돼요. 30kg이 넘는 박스는 카톡으로 문의해 주세요.</span>';return;}
+    var ship=G.tariff[bill-1], heavy=bill>=30?25:bill>=25?10:0, r=G.rates.filter(function(x){return String(x.kg)===box.value})[0], bp=r?r.box:0;
+    var volWin=vol>kg;
+    R.innerHTML='<div class="r'+(volWin?'':' on')+'"><span>실무게</span><span>'+kg.toFixed(1)+' kg</span></div>'+
+      '<div class="r'+(volWin?' on':'')+'"><span>부피무게</span><span>'+vol.toFixed(1)+' kg</span></div>'+
+      '<div class="r"><span>비용책정 무게 (큰 쪽, 소수점은 다음 kg)</span><span>'+bill+' kg</span></div>'+
+      '<div class="r"><span>배송비</span><span>'+eur(ship)+'</span></div>'+(heavy?'<div class="r"><span>헤비차지</span><span>'+eur(heavy)+'</span></div>':'')+
+      '<div class="r"><span>박스값</span><span>'+(box.value?eur(bp):'박스 선택 전')+'</span></div>'+
+      '<div class="tot"><b>예상 금액</b><strong>'+eur(ship+heavy+bp)+'</strong></div>'+
+      ((r&&r.kg<=10&&kg<14)?'<div class="perk-on">간식 꾸러미를 드려요.</div>':'')+(kg>=15?'<div class="perk-on cafe">고카페 커피값 €6을 지원해 드려요.</div>':'');
+  }
+  box.addEventListener('change',function(){
+    var r=G.rates.filter(function(x){return String(x.kg)===box.value})[0];
+    if(r&&r.size&&!L.value&&!W.value&&!H.value){var d=r.size.split('·');L.value=d[0];W.value=d[1];H.value=d[2];}
+    upd();
+  });
+  [L,W,H,K].forEach(function(i){i.addEventListener('input',upd)});
+}
+function modalHTML(kind){
+  var e=X.esc;
+  if(kind==='rates'){
+    var POP=[3,5,10,15,20];
+    var rows=G.tariff.map(function(v,k){var kg=k+1,pop=POP.indexOf(kg)>-1;return '<tr'+(pop?' class="pop"':'')+'><td>'+kg+'kg'+(pop?' <i>자주 써요</i>':'')+'</td><td>€'+v+'</td></tr>'}).join('');
+    return '<h2 id="modal-t">박스 배송 전체 가격</h2><p class="mnote">파리 사무실 기준이에요. 비용책정 무게는 실제 무게와 부피무게 중 더 큰 쪽이고, 소수점이 있으면 다음 kg으로 계산돼요 (10.1kg → 11kg).</p>'+
+      '<div class="tbl mrate"><table><thead><tr><th>비용책정 무게</th><th>배송비</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+      '<h3>박스값</h3><div class="kv">'+G.boxSale.map(function(r){return '<div><span>'+e(r[0])+'</span><b>'+r[1]+'</b></div>'}).join('')+'</div>'+
+      '<h3>헤비차지 (한 박스 무게 기준)</h3><div class="kv">'+G.heavy.map(function(r){return '<div><span>'+r[0]+'</span><b>+'+r[1]+'</b></div>'}).join('')+'</div>';
+  }
+  if(kind==='carrier'){
+    var rows=G.carrier.map(function(r){return '<tr><td>'+r[0]+'kg</td><td>€'+r[1]+'</td></tr>'}).join('');
+    return '<h2 id="modal-t">캐리어 배송 가격</h2><p class="mnote">파리 사무실 기준이에요. 캐리어 크기 제한은 없고, 10kg부터 보내실 수 있어요.</p>'+
+      '<div class="cnote"><div><b>포장은 무료</b>캐리어는 고프랑이 특수포장해서 보내드려요. 포장비는 받지 않아요.</div><div><b>포장 무게 +2kg</b>포장 후 무게로 계산돼요. 예) 실제 17kg 캐리어 → 19kg 요금</div><div><b>부피와 무게 중 큰 쪽</b>캐리어도 부피와 무게 중 더 무거운 쪽 요금이 적용돼요.</div></div>'+
+      '<h3>캐리어로 보내는 법</h3><ol class="msteps blue"><li><span>1</span><div><b>캐리어 그대로 가져오기</b>박스에 다시 담지 않으셔도 돼요.</div></li><li><span>2</span><div><b>노란 포스트잇 쓰고 붙이기</b>박스와 같은 노란 포스트잇에 이름·크기·무게·결제 방법을 적어 캐리어에 붙여 주세요.<div class="mpost">'+X.postitCarrier()+'</div></div></li><li><span>3</span><div><b>사진 찍어 카톡으로 보내기</b>고프랑이 특수포장·계측한 뒤 배송비를 안내드려요.</div></li></ol>'+
+      '<p class="mnote">300유로가 넘는 고가 캐리어는 직원이 있을 때 방문해 주시면 더 안심하고 맡기실 수 있어요.</p>'+
+      '<h3>무게별 가격</h3>'+
+      '<div class="tbl mrate"><table><thead><tr><th>포장 후 무게</th><th>배송비</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+      '<p class="mnote">10kg €78부터 1kg마다 €6.5씩 더해져요.</p>'+
+      '<h3>헤비차지 (캐리어 1개 무게 기준)</h3><div class="kv">'+G.heavy.map(function(r){return '<div><span>'+r[0]+'</span><b>+'+r[1]+'</b></div>'}).join('')+'</div>'+
+      '<p class="mnote">예) 28kg 캐리어: €195 + 헤비차지 €10 = €205</p>';
+  }
+  if(kind==='cafe'){
+    var cf=G.cafe;
+    return '<span class="kicker">Go-Café</span><h2 id="modal-t">커피 한 잔, €6 지원</h2><div class="mtarget"><b>참여 대상</b>'+e(cf.target)+'</div>'+
+      '<ol class="msteps">'+cf.steps.map(function(x,k){return '<li><span>'+(k+1)+'</span><div><b>'+e(x[0])+'</b>'+e(x[1])+'</div></li>'}).join('')+'</ol>'+
+      '<h3>인증샷 예시</h3><div class="mphotos">'+[1,2,3].map(function(n){return '<img src="img/cafe'+n+'.webp" alt="고카페 인증샷 예시 '+n+'" loading="lazy">'}).join('')+'</div>'+
+      '<h3>지급 방법</h3><p class="mnote">'+e(cf.payout)+'</p><p class="mwarn">'+e(cf.note).replace(/\n/g,'<br>')+'</p>'+
+      '<a class="ask-btn" href="'+G.kakao+'" target="_blank" rel="noopener">카톡으로 인증사진 보내기</a>';
+  }
+  return '';
+}
+var modal=document.getElementById('modal');
+function openModal(kind){ document.getElementById('modal-body').innerHTML=modalHTML(kind); if(modal.showModal){modal.showModal()} else {modal.setAttribute('open','')} modal.scrollTop=0; }
+modal.addEventListener('click',function(e){ if(e.target===modal) modal.close(); });
+document.addEventListener('click',function(e){ var t=e.target.closest('[data-modal]'); if(t){ e.preventDefault(); openModal(t.getAttribute('data-modal')); } });
+function bind(){
+  app.querySelectorAll('.check').forEach(function(sec){
+    var key=sec.dataset.key;
+    sec.querySelectorAll('.ci').forEach(function(b){b.addEventListener('click',function(){
+      var k=key+b.dataset.k; checked[k]=!checked[k]; save();
+      b.setAttribute('aria-pressed',checked[k]?'true':'false');
+      sec.querySelector('.count').textContent=sec.querySelectorAll('.ci[aria-pressed="true"]').length+' / '+sec.querySelectorAll('.ci').length;
+    })});
+  });
+}
+function home(){
+  var h='<div class="vh"><span class="kicker">Bienvenue · 셀프존</span><h1>고프랑 셀프존에 오신 걸 환영해요</h1><p>박스를 직접 고르고 포장하는 공간이에요.<br>오시기 전에 아래 체크리스트를 확인하시고, 도착하시면 순서대로 따라와 주세요.</p></div>';
+  h+=checklist('bv','오시기 전에 확인',G.beforeVisit,'#002395','#EEF1FA');
+  var ICO={visit:'<path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-7h6v7"/>',pack:'<path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',exit:'<circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/>'};
+  var SUB={visit:'파란 대문부터 사무실 문까지 · 6단계',pack:'박스 고르기부터 포스트잇까지 · 4단계',exit:'나가기 전 체크 4가지'};
+  h+='<section class="acts"><div class="acts-h"><span class="kicker">Le guide</span><b>순서대로 보기</b></div>'+G.parts.map(function(p,i){
+    return '<a class="act" href="#'+p.id+'" style="--c:'+COL[p.id][0]+'"><span class="ai"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICO[p.id]+'</svg></span><span class="at"><span class="ak">'+['I','II','III'][i]+' · '+p.fr+'</span><b>'+X.esc(p.title)+'</b><span class="d">'+SUB[p.id]+'</span></span><span class="ar" aria-hidden="true">→</span></a>';
+  }).join('')+'</section>';
+  app.innerHTML='<section class="view">'+h+'</section>'; bind(); X.setNav(''); window.scrollTo(0,0);
+}
+function detail(id){
+  var i=G.parts.findIndex(function(p){return p.id===id}),p=G.parts[i],nx=G.parts[i+1],h='';
+  h+='<a class="home-link" href="#">← 처음 화면</a><div class="vh"><span class="kicker">'+ROMAN[i]+' · '+p.fr+'</span><h1>'+X.esc(p.title)+'</h1><p>'+X.esc(p.lead).replace(/\n/g,'<br>')+'</p></div>';
+  if(id==='visit'){ h+=steps(p); }
+  else if(id==='pack'){ h+='<button class="carrier-card" type="button" data-modal="carrier"><span class="ci2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V3.5h6V6M9 20v1.5M15 20v1.5M10 10v6M14 10v6"/></svg></span><span><b>캐리어로 보내시나요?</b><span class="d">그대로 가져와 노란 포스트잇만 붙이면 돼요 · 포장은 무료</span></span><span class="ar" aria-hidden="true">→</span></button>'+steps(p)+offer(p.offer)+coffee(p.coffee); }
+  else {
+    h+=checklist('bl','나가기 전에 확인',p.steps,'#ED2939','#FDF1F1')+X.pay();
+    h+='<div class="bye"><span class="logo" aria-hidden="true">gofrance</span><b>오늘도 고프랑을 이용해 주셔서 감사해요</b><p>짐은 저희가 한국까지 잘 보내드릴게요. 조심히 들어가세요.</p><span class="fr">Merci et à bientôt !</span></div>';
+  }
+  if(nx) h+='<a class="next" href="#'+nx.id+'"><span>다음 · '+X.esc(nx.title)+'</span><span>→</span></a>';
+  app.innerHTML='<section class="view">'+h+'</section>'; var slot=app.querySelector('.calc-slot'); if(slot) slot.outerHTML=calcHTML(); var ps=app.querySelector('.perks-slot'); if(ps) ps.outerHTML=perksHTML(); bind(); bindCalc(); X.setNav(id); window.scrollTo(0,0);
+}
+function go(){var h=location.hash.slice(1); if(G.parts.some(function(p){return p.id===h})) detail(h); else home();}
+window.addEventListener('hashchange',go); go();
+})();
+</script>
+</body>
+</html>
