@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Parisienne&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Parisienne&display=swap">
 <link rel="stylesheet" href="base.css?v=2">
 <style>
 /* Layout: a front page (three points, before-visit checklist, three guide tiles) that opens one detail screen at a time; steps are a ruled numbered flow; the site's 6px tricolor band under the header; one-line bottom menu. */
@@ -278,6 +278,203 @@ dialog#modal::backdrop{background:rgba(10,20,50,.45)}
 .mex{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;font-size:.9rem;background:var(--rouge-tint);border-radius:8px;padding:8px 10px}
 .mex strong{color:var(--rouge);font-size:1.05rem}
 #modal-body .ask-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+
+/* ===== AIR — 고운돋움 한 가지 굵기 + 넉넉한 여백. 굵기 대신 크기·색·여백으로 위계를 만든다 ===== */
+:root{--f-body:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--f-head:var(--f-body);--f-fr:var(--f-body);--ink:#1F2433;--mute:#7A7F8C;--line:#ECEDF1;--soft:#F7F8FA}
+body{font-size:17px;line-height:1.85;letter-spacing:.005em;font-synthesis:none;color:#2E3340}
+b,strong,h1,h2,h3,dt,dd,th,td,button,.chip,.lk,.next,.ask-btn,.kicker,.count,.pk,.flag-imp,.n,.price,.tag{font-weight:400!important}
+h1,h2,h3{letter-spacing:-.01em;line-height:1.4;color:var(--ink)}
+.kicker{letter-spacing:.24em;font-size:.68rem;color:var(--bleu)}
+/* header: quieter */
+.top{padding-block:20px 16px;border-bottom:0}
+.logo{font-size:2.3rem}
+.top .meta b{font-size:.9rem;color:var(--mute)}
+.addrline{gap:12px;padding-block:4px 6px}
+.addrline strong{font-size:1rem;color:var(--ink)}
+.addr-btns{gap:10px}
+.addr-btns .chip{min-height:44px;font-size:.88rem;border-width:1px}
+.band{height:3px;margin-top:22px}
+/* views breathe */
+.view{padding-block:52px 32px;gap:64px}
+.vh{gap:14px}
+.vh h1{font-size:2.05rem;line-height:1.35}
+.vh p{font-size:1rem;line-height:1.9}
+.home-link{margin-bottom:-36px}
+/* checklist: open sheet instead of tinted card */
+.check{background:none;border:0;border-top:2px solid var(--c);border-radius:0;padding:22px 0 0;gap:8px}
+.check h2{font-size:1.35rem}
+.check .count{font-size:.9rem}
+.check li{border-top:1px solid var(--line)}
+.ci{padding:20px 0 14px;gap:14px;grid-template-columns:26px 1fr}
+.ci b{font-size:1.06rem;line-height:1.55;color:var(--ink)}
+.ci small{font-size:.9rem;margin-top:6px;line-height:1.7}
+.box{border-width:1.2px;border-radius:50%}
+.cextra{padding:0 0 20px 40px}
+.lk{border-width:1px;min-height:40px;padding:4px 16px}
+.check li.imp{background:var(--rouge-tint);border:0;border-radius:14px;margin:10px 0;padding:0 16px}
+.check li.imp .ci{padding-top:18px}
+.flag-imp{border-radius:999px;padding:1px 9px;vertical-align:1px}
+/* guide rows */
+.acts-h{padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.acts-h b{font-size:1.35rem}
+.act{min-height:112px;gap:18px;grid-template-columns:52px 1fr 18px}
+.act .ai{width:52px;height:52px;border:0;background:var(--tint)}
+.act .ak{font-size:.66rem;letter-spacing:.22em;margin-bottom:4px}
+.act b{font-size:1.3rem}
+.act .d{font-size:.9rem;margin-top:2px}
+/* steps */
+.steps{border-top:2px solid var(--ink)}
+.steps>li{padding:36px 0;gap:20px}
+.sh{grid-template-columns:36px 1fr;gap:14px}
+.n{width:36px;height:36px;border:0;background:var(--bleu);color:#fff;font-size:1rem}
+.sh b{font-size:1.28rem;line-height:1.45}
+.sb{gap:18px;padding-left:50px}
+@media (max-width:380px){.sb{padding-left:0}}
+.ph{border-radius:12px}
+.pair{gap:10px}
+.note{font-size:.9rem;line-height:1.75}
+.code{border-width:1px;border-radius:14px;padding:14px 16px}
+.tbl th,.tbl td{padding:11px 8px}
+/* blocks: fewer borders, more air */
+.ask{border-radius:18px;padding:22px}
+.ask p b{font-size:1.15rem;margin-bottom:6px}
+.ask-btn{min-height:50px;padding:0 26px;font-size:1rem}
+.perks{gap:16px;padding:22px 0}
+.perks .pk-h{font-size:1.02rem}
+.snack,.howfee,.appay,.hf-case{border-radius:14px}
+.howfee{padding:20px;gap:12px}
+.postit{font-size:1rem;padding:18px 20px 20px}
+.postits{gap:30px 20px;padding:14px 4px 10px}
+.next{min-height:58px;padding:0 26px;font-size:1.05rem}
+.bye{gap:12px;padding:44px 0 12px}
+.bye b{font-size:1.45rem}
+.cafe{gap:20px;padding-top:22px}
+.cafe-steps li{border-radius:12px;padding:14px 12px}
+/* popups */
+#modal-body{padding:30px 22px 26px;gap:18px}
+#modal-body h2{font-size:1.45rem}
+#modal-body h3{font-size:1.12rem;margin-top:12px}
+.msteps{gap:14px}
+.msteps li>span,.mdims span{font-weight:400}
+dialog#modal,dialog#calc-dlg{border-radius:22px}
+/* bottom menu: labels lighter */
+.bnav a{font-size:.8rem}
+
+/* multi-item estimator */
+.c-disc{background:var(--rouge-tint);border-radius:14px;padding:12px 16px;font-size:.9rem;color:var(--mute);line-height:1.7}
+.c-disc b{display:block;color:var(--rouge);font-size:.98rem}
+.c-items{display:grid;gap:14px}
+.c-item{border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;display:grid;gap:10px;background:#fff}
+.c-ih{display:flex;justify-content:space-between;align-items:center}
+.c-tag{flex:none;white-space:nowrap;display:inline-block;width:auto;height:auto;line-height:1.6;font-size:.82rem;color:#fff;background:var(--bleu);border-radius:999px;padding:2px 12px}
+.c-tag.carrier{background:var(--ink)}
+.c-del{background:none;border:0;color:var(--mute);font:inherit;font-size:.85rem;cursor:pointer;min-height:36px;padding:0 4px;text-decoration:underline;text-underline-offset:3px}
+.c-line{font-size:.86rem;color:var(--mute);line-height:1.6;display:flex;flex-wrap:wrap;gap:0 4px;align-items:baseline;border-top:1px dashed var(--line);padding-top:10px}
+.c-line b{color:var(--ink)}
+.c-line strong{margin-left:auto;font-size:1.1rem;color:var(--bleu)}
+.c-line .warnline{color:var(--rouge)}
+.c-add{display:flex;gap:10px;flex-wrap:wrap}
+.c-add .chip{min-height:44px;flex:1;justify-content:center;font-size:.92rem;border-style:dashed}
+.c-tot-note{font-size:.8rem;color:var(--rouge);text-align:right;margin-top:2px}
+.c-ev{display:grid;gap:10px}
+.c-ev-h{font-size:.72rem;letter-spacing:.2em;color:var(--bleu)}
+.c-evi{display:grid;grid-template-columns:56px 1fr;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--mute);font-size:.86rem;line-height:1.6}
+.c-evi>div:only-child{grid-column:1/-1}
+.c-evi b{display:block;color:var(--ink);font-size:.98rem}
+.c-evi img{width:56px;height:56px;object-fit:cover;border-radius:10px}
+.c-evi.on{background:var(--bleu-tint);border-color:transparent}
+.c-evi.on b{color:var(--bleu)}
+.c-evi.cafe.on{background:var(--rouge-tint)}
+.c-evi.cafe.on b{color:var(--rouge)}
+.c-cafe{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:var(--rouge);border:1px solid var(--rouge);font-size:1.05rem}
+.c-evi.on .c-cafe{background:var(--rouge);color:#fff}
+.c-evi .cafe-link{display:inline-block;margin-top:6px;min-height:30px;font-size:.85rem}
+
+.c-hint{font-size:.8rem;color:var(--rouge);margin-top:-4px}
+.c-must{border:1.5px solid var(--rouge);border-radius:16px;padding:16px 16px 14px;display:grid;gap:10px;background:#fff}
+.c-must-h{color:var(--rouge);font-size:1.02rem}
+.c-must ol{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:m}
+.c-must li{counter-increment:m;display:grid;grid-template-columns:26px 1fr;column-gap:10px;font-size:.86rem;color:var(--mute);line-height:1.65}
+.c-must li::before{content:counter(m);grid-row:span 2;width:24px;height:24px;border-radius:50%;background:var(--rouge);color:#fff;display:grid;place-items:center;font-size:.8rem;margin-top:2px}
+.c-must li b{color:var(--ink);font-size:.95rem}
+
+/* perks: photo left, both labels in one column on the right */
+.perks>.pk-body{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center}
+.pk-body img{width:96px;height:96px;object-fit:cover;border-radius:12px}
+.pk-rows{display:grid;gap:12px;min-width:0}
+.pk-row{display:grid;gap:4px;justify-items:start}
+.pk-row .pk{display:inline-block;margin:0;padding:2px 10px}
+.pk-row+.pk-row{border-top:1px dashed var(--line);padding-top:12px}
+
+/* step 4: send-photo block */
+.sendk{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--bleu-tint);border-radius:16px;padding:16px}
+.sendk-i{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--bleu)}
+.sendk-i svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.sendk b{display:block;color:var(--bleu);font-size:1.02rem;line-height:1.5}
+.sendk p{font-size:.88rem;color:var(--mute);margin-top:4px;line-height:1.7}
+
+/* exit: event checker */
+.evbtn{display:grid;grid-template-columns:40px 1fr 16px;gap:12px;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--c);border-radius:14px;padding:12px 14px;font:inherit;color:var(--ink);cursor:pointer;min-height:64px}
+.evbtn-i{width:40px;height:40px;border-radius:50%;background:var(--tint);display:grid;place-items:center;color:var(--c)}
+.evbtn-i svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+.evbtn b{display:block;color:var(--c);font-size:1rem}
+.evbtn span span{display:block;font-size:.82rem;color:var(--mute);line-height:1.5}
+dialog#ev-dlg{border:0;padding:0;width:min(520px,calc(100vw - 24px));max-height:calc(100vh - 40px);border-radius:22px;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+dialog#ev-dlg::backdrop{background:rgba(10,20,50,.45)}
+.evx{padding:26px 18px 22px;display:grid;gap:14px}
+.evx h3{font-size:1.3rem;padding-right:44px}
+.evx-lead{font-size:.9rem;color:var(--mute);line-height:1.7}
+.ev-items{display:grid;gap:10px}
+.ev-row{display:grid;grid-template-columns:22px minmax(0,1fr) 104px 30px;gap:8px;align-items:center}
+.ev-n{width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:.75rem}
+.ev-row select,.ev-row input{width:100%;min-height:46px;border:1px solid #CFCFCF;border-radius:10px;padding:8px 10px;font:inherit;font-size:.95rem;color:var(--ink);background:#fff}
+.ev-kg{position:relative;display:block}
+.ev-kg input{padding-right:30px}
+.ev-kg span{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:.82rem;color:var(--mute)}
+.ev-del{width:30px;height:30px;border:0;background:none;color:var(--mute);font-size:1.2rem;cursor:pointer}
+.ev-add{justify-self:start;min-height:42px;border-style:dashed}
+.ev-out{display:grid;gap:10px}
+.ev-empty{font-size:.88rem;color:var(--mute);background:var(--soft);border-radius:12px;padding:14px}
+.ev-sum{font-size:.85rem;color:var(--mute)}
+.ev-card{display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:14px;color:var(--mute);font-size:.88rem;line-height:1.65}
+.ev-card img{width:60px;height:60px;object-fit:cover;border-radius:12px;filter:grayscale(1);opacity:.6}
+.ev-card.on img{filter:none;opacity:1}
+.ev-card b{display:block;color:var(--ink);font-size:1.02rem}
+.ev-st{display:inline-block;font-size:.75rem;border-radius:999px;padding:1px 10px;background:var(--soft);color:var(--mute);margin-bottom:4px}
+.ev-card.on{background:var(--bleu-tint);border-color:transparent}
+.ev-card.on .ev-st{background:var(--bleu);color:#fff}
+.ev-card.cafe.on{background:var(--rouge-tint)}
+.ev-card.cafe.on .ev-st{background:var(--rouge)}
+.ev-cafe{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--mute);font-size:1.1rem}
+.ev-card.cafe.on .ev-cafe{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.ev-card .cafe-link{display:inline-block;margin-top:6px;min-height:30px;font-size:.85rem}
+.evx-note{font-size:.8rem;color:var(--mute)}
+.after.pay .paynote{font-size:.9rem;color:var(--ink);background:var(--soft);border-radius:12px;padding:12px 14px;line-height:1.7}
+
+/* event block: stand out under the total */
+.c-ev{border:2px solid var(--bleu);border-radius:20px;padding:16px;gap:12px;background:#fff}
+.c-ev.has{box-shadow:0 10px 24px -14px rgba(0,35,149,.45)}
+.c-ev-h{display:flex;align-items:center;gap:10px}
+.c-ev-ic{width:38px;height:38px;border-radius:50%;background:var(--bleu);color:#fff;display:grid;place-items:center;flex:none}
+.c-ev-ic svg,.c-ev-jump svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.c-ev-h b{font-size:1.18rem;color:var(--ink);letter-spacing:0}
+.c-ev-n{margin-left:auto;font-size:.82rem;color:#fff;background:var(--rouge);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.c-ev-n.off{background:var(--soft);color:var(--mute)}
+.c-ev-jump{display:flex;align-items:center;gap:6px;justify-content:center;margin-top:8px;background:var(--bleu);color:#fff;border-radius:999px;padding:8px 12px;font-size:.88rem}
+.ev-rule{display:block;margin-top:4px;font-size:.82rem;color:var(--rouge)}
+
+.ev-card.blog.on{background:#F3F6EF;border-color:transparent}
+.ev-card.blog.on .ev-st{background:#2F6B3A}
+.ev-blog{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#2F6B3A;color:#fff}
+.ev-blog svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+.blog-link{color:#2F6B3A!important;border-bottom-color:#2F6B3A!important;text-decoration:none;display:inline-block;margin-top:6px}
+/* step 3: flat packing callout */
+.flatbox{border:1.5px solid var(--rouge);border-radius:16px;padding:16px;display:grid;gap:8px;background:#fff}
+.flatbox>b{color:var(--rouge);font-size:1.05rem}
+.flatbox>p{font-size:.9rem;color:var(--mute);line-height:1.75}
+.flat-ex{display:grid;gap:2px;background:var(--rouge-tint);border-radius:12px;padding:12px 14px;font-size:.86rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.flat-ex strong{color:var(--rouge);font-size:.95rem}
+.flat-ex span+strong{margin-top:6px}
 </style>
 </head>
 <body>
@@ -289,7 +486,7 @@ dialog#modal::backdrop{background:rgba(10,20,50,.45)}
 <div class="band wrap" aria-hidden="true" style="padding:0"><i></i><i></i><i></i></div>
 <main class="wrap" id="app"></main>
 <dialog id="modal" aria-labelledby="modal-t"><form method="dialog" class="dlg-x"><button type="submit" aria-label="닫기">×</button></form><div id="modal-body"></div></dialog>
-<script src="data.js?v=2"></script>
+<script src="data.js?v=8"></script>
 <script>
 (function(){
 var G=GUIDE,X=GX,app=document.getElementById('app'),ROMAN=['I','II','III'],checked={};
@@ -306,6 +503,7 @@ function checklist(key,title,items,c,tint){
       var ex='';
       if(it.link) ex+='<a class="lk" href="'+it.link+'" target="_blank" rel="noopener">'+X.esc(it.linkT||'바로가기')+' →</a>';
       if(it.kakao) ex+='<a class="lk solid" href="'+G.kakao+'" target="_blank" rel="noopener">사진 아직이면 카톡으로 보내기 →</a>';
+      if(it.events) ex+='<button class="evbtn" type="button" id="open-ev"><span class="evbtn-i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z"/></svg></span><span><b>나에게 맞는 이벤트 확인하기</b><span>무게만 넣으면 가져갈 것 · 참여할 것을 알려드려요</span></span><span aria-hidden="true">→</span></button>';
       if(it.img) ex+=X.photos(it);
       return '<li'+(it.important?' class="imp"':'')+'><button class="ci" type="button" data-k="'+k+'" aria-pressed="'+on+'"><span class="box">'+TICK+'</span><span><b>'+(it.important?'<span class="flag-imp">중요</span>':'')+X.esc(it.t)+'</b>'+(it.fr?'<span class="fr">'+X.esc(it.fr)+'</span>':'')+'<small>'+X.esc(it.d).replace(/\n/g,'<br>')+'</small></span></button>'+(ex?'<div class="cextra">'+ex+'</div>':'')+'</li>';
     }).join('')+'</ul></section>';
@@ -329,54 +527,135 @@ function coffee(c){
     '<ol class="cafe-steps">'+c.steps.map(function(x,k){return '<li><span>'+(k+1)+'</span>'+X.esc(x)+'</li>'}).join('')+'</ol>'+
     '<button class="cafe-link" type="button" data-modal="cafe">'+X.esc(c.linkT)+' <span aria-hidden="true">→</span></button></section>';
 }
+function evDialog(){
+  return '<dialog id="ev-dlg" aria-labelledby="ev-t"><form method="dialog" class="dlg-x"><button type="submit" aria-label="닫기">×</button></form><section class="evx">'+
+    '<h3 id="ev-t">나에게 맞는 이벤트 확인</h3><p class="evx-lead">사용한 박스와 계측한 무게만 넣어 주세요.<br>금액은 고프랑 청구서로 안내드려요.</p>'+
+    '<div id="ev-items" class="ev-items"></div><button type="button" class="chip ev-add" id="ev-add">＋ 짐 하나 더</button>'+
+    '<div id="ev-out" class="ev-out" aria-live="polite"></div><p class="evx-note">실제 저울 무게 기준이에요.</p></section></dialog>';
+}
+function bindEv(){
+  var dlg=document.getElementById('ev-dlg'),ob=document.getElementById('open-ev'); if(!dlg||!ob) return;
+  var list=document.getElementById('ev-items'),out=document.getElementById('ev-out'),items=[{t:'',kg:''}];
+  ob.addEventListener('click',function(){ if(dlg.showModal){dlg.showModal()} else {dlg.setAttribute('open','')} });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+  function opts(sel){return '<option value="">짐 종류 선택</option>'+G.rates.map(function(r){return '<option value="'+r.kg+'"'+(sel===String(r.kg)?' selected':'')+'>'+r.kg+'kg 박스</option>'}).join('')+'<option value="own"'+(sel==='own'?' selected':'')+'>가져온 박스</option><option value="carrier"'+(sel==='carrier'?' selected':'')+'>캐리어</option>'}
+  function draw(){
+    list.innerHTML=items.map(function(it,i){return '<div class="ev-row" data-i="'+i+'"><span class="ev-n">'+(i+1)+'</span><select data-k="t" aria-label="짐 '+(i+1)+' 종류">'+opts(it.t)+'</select><label class="ev-kg"><input data-k="kg" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="무게" value="'+it.kg+'" aria-label="짐 '+(i+1)+' 무게 kg"><span>kg</span></label>'+(items.length>1?'<button type="button" class="ev-del" data-del="'+i+'" aria-label="짐 '+(i+1)+' 빼기">×</button>':'<span></span>')+'</div>'}).join('');
+    calc();
+  }
+  function calc(){
+    var ready=items.filter(function(x){return x.t&&+x.kg>0});
+    if(!ready.length){out.innerHTML='<p class="ev-empty">짐 종류와 무게를 넣으면 결과가 나와요.</p>';return}
+    var total=0,snack=false,hasBox=false;
+    var maxBox=0;ready.forEach(function(x){var kg=+x.kg;total+=kg;var b=+x.t;if(x.t&&x.t!=='carrier'&&kg>maxBox)maxBox=kg;if(b){hasBox=true;if(b<=10&&kg<=14)snack=true}});
+    total=Math.round(total*10)/10;
+    var cafe=maxBox>=15;
+    var h='<p class="ev-sum">짐 '+ready.length+'개 · 가장 무거운 박스 '+(Math.round(maxBox*10)/10)+'kg</p>';
+    h+='<div class="ev-card'+(snack?' on':'')+'"><img src="img/snacks.webp" alt="" loading="lazy"><div><span class="ev-st">'+(snack?'가져갈 수 있어요':'이번엔 해당 없어요')+'</span><b>간식 꾸러미</b><p>'+(snack?'나가시기 전에 간식 꾸러미 하나 챙겨 가세요.'+'<span class="ev-rule">신청서당 1개예요. 동행인 중복은 안 돼요.</span>':'고프랑 1–10kg 박스를 쓰고 14kg 이하일 때 드려요.')+'</p></div></div>';
+    h+='<div class="ev-card cafe'+(cafe?' on':'')+'"><span class="ev-cafe">€6</span><div><span class="ev-st">'+(cafe?'참여할 수 있어요':'이번엔 해당 없어요')+'</span><b>고카페 커피값 €6</b><p>'+(cafe?'나가실 때 사무실의 고카페 포스트잇을 꼭 챙겨 주세요. 카페에서 후기와 인증샷을 찍어 카톡으로 보내 주시면 돼요.':'15kg 이상인 박스가 하나 있으면 참여할 수 있어요.')+'</p>'+(cafe?'<button type="button" class="cafe-link" data-modal="cafe">참여 방법 보기</button>':'')+'</div></div>';
+    h+='<div class="ev-card blog on"><span class="ev-blog" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4M8 12h8M8 16h6"/></svg></span><div><span class="ev-st">누구나 참여할 수 있어요</span><b>블로그 후기 이벤트</b><p>짐 무게와 상관없이 언제든 참여할 수 있어요.</p><a class="cafe-link blog-link" href="'+G.kakao+'" target="_blank" rel="noopener">참여 방법 카톡으로 묻기</a></div></div>';
+    out.innerHTML=h;
+  }
+  list.addEventListener('input',function(e){var k=e.target.dataset.k;if(!k)return;items[+e.target.closest('.ev-row').dataset.i][k]=e.target.value;calc()});
+  list.addEventListener('change',function(e){var k=e.target.dataset.k;if(!k)return;items[+e.target.closest('.ev-row').dataset.i][k]=e.target.value;calc()});
+  list.addEventListener('click',function(e){var d=e.target.closest('[data-del]');if(!d)return;items.splice(+d.dataset.del,1);draw()});
+  document.getElementById('ev-add').addEventListener('click',function(){items.push({t:'',kg:''});draw();var s=list.lastElementChild.querySelector('select');if(s)s.focus()});
+  draw();
+}
 function perksHTML(){
   return '<div class="perks"><p class="pk-h">고프랑이 감사한 마음으로 준비했어요</p>'+
-    '<div class="pk-snack"><img src="img/snacks.webp" alt="Merci GoFrance 태그가 달린 간식 꾸러미" loading="lazy"><div><span class="pk">간식 꾸러미</span><p>1–10kg 박스 · 14kg 미만이면 간식 꾸러미를 드려요.</p></div></div>'+
-    '<div class="pk-cafe"><span class="pk cafe-k">커피 €6</span><p>15kg 이상이면 커피값 €6을 지원해 드려요.</p></div>'+
-    '<small>실제 저울 무게 기준이에요.</small></div>';
+    '<div class="pk-body"><img src="img/snacks.webp" alt="Merci GoFrance 태그가 달린 간식 꾸러미" loading="lazy"><div class="pk-rows">'+
+      '<div class="pk-row"><span class="pk">간식 꾸러미</span><p>1–10kg 박스 · 14kg 이하이면 간식 꾸러미를 드려요.</p></div>'+
+      '<div class="pk-row"><span class="pk cafe-k">커피 €6</span><p>15kg 이상 박스가 있으면 커피값 €6을 지원해 드려요.</p></div>'+
+    '</div></div>'+
+    '<small>실제 저울 무게 기준이에요.</small>'+
+    '<button class="evbtn" type="button" id="open-ev" style="--c:#002395;--tint:#EEF1FA"><span class="evbtn-i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z"/></svg></span><span><b>나에게 맞는 이벤트 확인하기</b><span>무게만 넣으면 가져갈 것 · 참여할 것을 알려드려요</span></span><span aria-hidden="true">→</span></button></div>';
 }
 
 function calcHTML(){
-  return '<div class="ask"><p><b>혹시 배송비가 궁금하신가요?</b>계측한 숫자를 넣으면 예상 금액을 볼 수 있어요.</p><button class="ask-btn" type="button" id="open-calc">배송비 예상해보기</button></div>'+
+  return '<div class="ask"><p><b>보내는 짐, 얼마쯤 나올까요?</b>박스와 캐리어를 모두 넣어 예상 금액을 볼 수 있어요.<br>이벤트 대상인지도 함께 알려드려요.</p><button class="ask-btn" type="button" id="open-calc">보내는 짐 가격 예상해보기</button></div>'+
     '<dialog id="calc-dlg" aria-labelledby="calc-t"><form method="dialog" class="dlg-x"><button type="submit" aria-label="닫기">×</button></form>'+calcBody()+'</dialog>';
 }
 function calcBody(){
-  var opts=G.rates.map(function(r){return '<option value="'+r.kg+'">'+r.kg+'kg 박스'+(r.size?' ('+r.size+')':'')+'</option>'}).join('');
-  return '<section class="calc"><h3 id="calc-t">배송비 예상해보기 <span class="fr">Estimation</span></h3>'+
-    '<label class="wide">사용한 박스<select id="c-box"><option value="">선택해 주세요</option>'+opts+'<option value="own">가져온 박스 (박스값 없음)</option></select></label>'+
-    '<div class="grid"><label>가로 cm<input id="c-l" type="number" inputmode="decimal" min="1" placeholder="50"></label><label>세로 cm<input id="c-w" type="number" inputmode="decimal" min="1" placeholder="33"></label><label>높이 cm<input id="c-h" type="number" inputmode="decimal" min="1" placeholder="29"></label></div>'+
-    '<label class="wide">계측한 무게 kg<input id="c-kg" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="8.4"></label>'+
-    '<div class="res" id="c-res" aria-live="polite"><span class="empty">박스·크기·무게를 넣으면 예상 금액이 나와요.</span></div>'+
-    '<div class="warn"><p>실무게와 부피무게(가로×세로×높이÷5,000) 중 더 큰 쪽으로 계산돼요.</p><p>소수점이 있으면 다음 kg 요금이 적용돼요. 예) 10.1kg → 11kg</p><p>직원이 검수·계측하면서 무게와 금액이 바뀔 수 있어요. 최종 배송비는 실측 후 카톡으로 안내드려요.</p></div></section>';
+  return '<section class="calc"><h3 id="calc-t">보내는 짐 가격 예상해보기</h3>'+
+    '<p class="c-disc"><b>할인은 넣지 않은 금액이에요.</b>학생 할인 같은 할인은 고프랑 청구서에서 적용됩니다.</p>'+
+    '<div id="c-items" class="c-items"></div>'+
+    '<div class="c-add"><button type="button" class="chip" data-add="box">＋ 박스 추가</button><button type="button" class="chip" data-add="carrier">＋ 캐리어 추가</button></div>'+
+    '<div class="res" id="c-res" aria-live="polite"></div>'+
+    '<div id="c-ev" class="c-ev" aria-live="polite"></div>'+
+    '<div class="c-must"><p class="c-must-h">꼭 확인해 주세요</p><ol>'+
+      '<li><b>소수점은 무조건 올려요</b>반올림·반내림 없이 다음 kg으로 계산해요.<br>예) 10.1kg → 11kg</li>'+
+      '<li><b>포장한 뒤, 가장 튀어나온 곳까지 재요</b>박스 위·아래·옆이 불룩하게 튀어나왔다면 튀어나온 부분까지 포함한 크기로 계측돼요.</li>'+
+      '<li><b>결제는 청구서를 받은 뒤에 해 주세요</b>직원이 검수·계측한 뒤 고프랑 청구서를 보내드려요. 청구서 금액으로 결제해 주세요.</li>'+
+    '</ol></div>'+
+    '<div class="warn"><p>실무게와 부피무게(가로×세로×높이÷5,000) 중 더 큰 쪽으로 계산해요.</p><p>캐리어는 특수포장으로 실무게·부피무게에 각각 2kg이 더해져요.</p><p>여기 금액은 예상이에요. 검수·계측하면서 바뀔 수 있어요.</p></div></section>';
 }
 function bindCalc(){
-  var box=document.getElementById('c-box'); if(!box) return;
-  var dlg=document.getElementById('calc-dlg'),ob=document.getElementById('open-calc');
+  var list=document.getElementById('c-items'); if(!list) return;
+  var dlg=document.getElementById('calc-dlg'),ob=document.getElementById('open-calc'),R=document.getElementById('c-res'),EV=document.getElementById('c-ev');
   ob.addEventListener('click',function(){ if(dlg.showModal){dlg.showModal()} else {dlg.setAttribute('open','')} });
   dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
-  var L=document.getElementById('c-l'),W=document.getElementById('c-w'),H=document.getElementById('c-h'),K=document.getElementById('c-kg'),R=document.getElementById('c-res');
-  function eur(n){return '€'+(Math.round(n*100)/100).toFixed(n%1?1:0)}
-  function upd(){
-    var l=+L.value,w=+W.value,h=+H.value,kg=+K.value;
-    if(!(l>0&&w>0&&h>0&&kg>0)){R.innerHTML='<span class="empty">박스·크기·무게를 넣으면 예상 금액이 나와요.</span>';return;}
-    var vol=l*w*h/5000, use=Math.max(kg,vol), bill=Math.max(1,Math.ceil(use-1e-9));
-    if(bill>30){R.innerHTML='<span class="empty">'+bill+'kg로 계산돼요. 30kg이 넘는 박스는 카톡으로 문의해 주세요.</span>';return;}
-    var ship=G.tariff[bill-1], heavy=bill>=30?25:bill>=25?10:0, r=G.rates.filter(function(x){return String(x.kg)===box.value})[0], bp=r?r.box:0;
-    var volWin=vol>kg;
-    R.innerHTML='<div class="r'+(volWin?'':' on')+'"><span>실무게</span><span>'+kg.toFixed(1)+' kg</span></div>'+
-      '<div class="r'+(volWin?' on':'')+'"><span>부피무게</span><span>'+vol.toFixed(1)+' kg</span></div>'+
-      '<div class="r"><span>비용책정 무게 (큰 쪽, 소수점은 다음 kg)</span><span>'+bill+' kg</span></div>'+
-      '<div class="r"><span>배송비</span><span>'+eur(ship)+'</span></div>'+(heavy?'<div class="r"><span>헤비차지</span><span>'+eur(heavy)+'</span></div>':'')+
-      '<div class="r"><span>박스값</span><span>'+(box.value?eur(bp):'박스 선택 전')+'</span></div>'+
-      '<div class="tot"><b>예상 금액</b><strong>'+eur(ship+heavy+bp)+'</strong></div>'+
-      ((r&&r.kg<=10&&kg<14)?'<div class="perk-on">간식 꾸러미를 드려요.</div>':'')+(kg>=15?'<div class="perk-on cafe">고카페 커피값 €6을 지원해 드려요.</div>':'');
+  var items=[],seq=0;
+  function eur(n){n=Math.round(n*10)/10;return '€'+(n%1?n.toFixed(1):String(n))}
+  function heavyOf(kg){var t=[[60,55],[50,45],[40,35],[30,25],[25,10]];for(var i=0;i<t.length;i++)if(kg>=t[i][0])return t[i][1];return 0}
+  function boxOpts(sel){return '<option value="">박스 선택</option>'+G.rates.map(function(r){return '<option value="'+r.kg+'"'+(String(sel)===String(r.kg)?' selected':'')+'>'+r.kg+'kg 박스 ('+r.size+')</option>'}).join('')+'<option value="own"'+(sel==='own'?' selected':'')+'>가져온 박스 (박스값 없음)</option>'}
+  function add(type){items.push({id:++seq,type:type,box:'',l:'',w:'',h:'',kg:''});draw();var last=list.lastElementChild;if(last){var f=last.querySelector(type==='box'?'select':'input');if(f)f.focus()}}
+  function draw(){
+    list.innerHTML=items.map(function(it,i){
+      var n=items.filter(function(x,k){return k<=i&&x.type===it.type}).length;
+      return '<div class="c-item" data-id="'+it.id+'"><div class="c-ih"><span class="c-tag '+it.type+'">'+(it.type==='box'?'박스 '+n:'캐리어 '+n)+'</span>'+(items.length>1?'<button type="button" class="c-del" data-del="'+it.id+'" aria-label="이 짐 빼기">빼기</button>':'')+'</div>'+
+      (it.type==='box'?'<label class="wide">사용한 박스<select data-k="box">'+boxOpts(it.box)+'</select></label>':'')+
+      '<div class="grid"><label>가로 cm<input data-k="l" type="number" inputmode="decimal" min="1" value="'+it.l+'"></label><label>세로 cm<input data-k="w" type="number" inputmode="decimal" min="1" value="'+it.w+'"></label><label>높이 cm<input data-k="h" type="number" inputmode="decimal" min="1" value="'+it.h+'"></label></div>'+
+      '<p class="c-hint">'+(it.type==='box'?'포장 후, 가장 튀어나온 곳까지 잰 크기':'바퀴·손잡이까지 포함한 가장 큰 바깥 크기')+'</p>'+
+      '<label class="wide">'+(it.type==='box'?'계측한 무게 kg':'캐리어 무게 kg (포장 전)')+'<input data-k="kg" type="number" inputmode="decimal" min="0.1" step="0.1" value="'+it.kg+'"></label>'+
+      '<p class="c-line" data-line="'+it.id+'"></p></div>';
+    }).join('');
+    calc();
   }
-  box.addEventListener('change',function(){
-    var r=G.rates.filter(function(x){return String(x.kg)===box.value})[0];
-    if(r&&r.size&&!L.value&&!W.value&&!H.value){var d=r.size.split('·');L.value=d[0];W.value=d[1];H.value=d[2];}
-    upd();
-  });
-  [L,W,H,K].forEach(function(i){i.addEventListener('input',upd)});
+  function one(it){
+    var l=+it.l,w=+it.w,h=+it.h,kg=+it.kg;
+    if(!(l>0&&w>0&&h>0&&kg>0)) return null;
+    var vol=l*w*h/5000,add=it.type==='carrier'?2:0,a=kg+add,v=vol+add,bill=Math.max(1,Math.ceil(Math.max(a,v)-1e-9)),o={kg:kg,bill:bill,volWin:v>a,raw:Math.max(a,v)};
+    if(it.type==='box'){
+      if(bill>30){o.err=bill+'kg로 계산돼요. 30kg이 넘는 박스는 카톡으로 문의해 주세요.';return o}
+      var r=G.rates.filter(function(x){return String(x.kg)===it.box})[0];
+      o.ship=G.tariff[bill-1];o.box=r?r.box:0;o.boxKg=r?r.kg:null;o.noBox=!it.box;
+    } else {
+      if(bill>42){o.err=bill+'kg로 계산돼요. 42kg이 넘는 캐리어는 카톡으로 문의해 주세요.';return o}
+      if(bill<10) bill=o.bill=10;
+      o.ship=G.carrier[bill-10][1];o.box=0;
+    }
+    o.heavy=heavyOf(bill);o.sum=o.ship+o.heavy+o.box;return o;
+  }
+  function calc(){
+    var maxBox=0,total=0,ok=0,actual=0,snack=false,anyErr=false,missing=0,boxIn=false;
+    items.forEach(function(it){
+      var o=one(it),el=list.querySelector('[data-line="'+it.id+'"]');
+      if(!o){el.innerHTML='<span class="empty">크기와 무게를 넣어 주세요.</span>';missing++;return}
+      if(o.err){el.innerHTML='<span class="warnline">'+o.err+'</span>';anyErr=true;return}
+      ok++;total+=o.sum;actual+=o.kg;if(it.type==='box'&&o.kg>maxBox)maxBox=o.kg;
+      if(it.type==='box'&&o.boxKg&&o.boxKg<=10&&o.kg<=14) snack=true;
+      if(it.type==='box') boxIn=true;
+      el.innerHTML=(it.type==='carrier'?'포장 후 ':'')+(o.volWin?'부피무게':'실무게')+' '+(Math.floor(o.raw*10)/10).toFixed(1)+'kg → 올림 <b>'+o.bill+'kg</b> · 배송비 '+eur(o.ship)+(o.heavy?' · 헤비차지 '+eur(o.heavy):'')+(it.type==='box'?(o.noBox?' · 박스 선택 전':' · 박스값 '+eur(o.box)):'')+'<strong>'+eur(o.sum)+'</strong>';
+    });
+    if(!ok){R.innerHTML='<span class="empty">크기와 무게를 넣으면 예상 금액이 나와요.</span>';EV.innerHTML='';return}
+    R.innerHTML='<div class="r"><span>계산된 짐</span><span>'+ok+'개'+(missing||anyErr?' (나머지는 입력 전)':'')+'</span></div><div class="tot"><b>예상 금액</b><strong>'+eur(total)+'</strong></div><p class="c-tot-note">할인 전 예상 금액 · 할인과 결제는 고프랑 청구서로 안내드려요</p>';
+    var nOn=(snack?1:0)+(maxBox>=15?1:0);
+    var ev='<div class="c-ev-h"><span class="c-ev-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z"/></svg></span><b>이벤트 대상 안내</b>'+(nOn?'<span class="c-ev-n">'+nOn+'개 대상</span>':'<span class="c-ev-n off">아직 없어요</span>')+'</div>';
+    ev+= snack?'<div class="c-evi on"><img src="img/snacks.webp" alt="" loading="lazy"><div><b>간식 꾸러미 대상이에요</b><span>1–10kg 박스 · 14kg 이하이에요. 나가실 때 하나 챙겨 가세요.</span><span class="ev-rule">신청서당 1개예요. 동행인 중복은 안 돼요.</span></div></div>'
+      : (boxIn?'<div class="c-evi"><div><b>간식 꾸러미</b><span>1–10kg 박스를 쓰고 14kg 이하일 때 드려요.</span></div></div>':'');
+        ev+= maxBox>=15?'<div class="c-evi on cafe"><span class="c-cafe">€6</span><div><b>고카페 커피값 €6 지원 대상이에요</b><span>15kg 이상 박스를 보내시는 고객님께 드려요. 포스트잇 후기와 인증샷을 카톡으로 보내 주세요.</span><br><button type="button" class="cafe-link" data-modal="cafe">참여 방법 보기</button></div></div>'
+      : '<div class="c-evi cafe"><span class="c-cafe">€6</span><div><b>고카페 커피값 €6 지원</b><span>15kg 이상인 박스가 하나 있으면 대상이 돼요.'+(boxIn?' 지금 가장 무거운 박스는 '+(Math.round(maxBox*10)/10)+'kg이에요.':'')+'</span></div></div>';
+    EV.innerHTML=ev; EV.classList.toggle('has',nOn>0);
+    if(nOn) R.insertAdjacentHTML('beforeend','<p class="c-ev-jump"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"4\" y=\"9\" width=\"16\" height=\"11\" rx=\"1.5\"/><path d=\"M3 9h18M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9z\"/></svg>이벤트 '+nOn+'개 대상이에요 ↓</p>');
+  }
+  list.addEventListener('input',function(e){var k=e.target.dataset.k;if(!k)return;var id=+e.target.closest('.c-item').dataset.id;var it=items.filter(function(x){return x.id===id})[0];it[k]=e.target.value;
+    if(k==='box'){var r=G.rates.filter(function(x){return String(x.kg)===it.box})[0];if(r&&r.size&&!it.l&&!it.w&&!it.h){var d=r.size.split('·');it.l=d[0];it.w=d[1];it.h=d[2];var c=e.target.closest('.c-item');c.querySelector('[data-k="l"]').value=d[0];c.querySelector('[data-k="w"]').value=d[1];c.querySelector('[data-k="h"]').value=d[2];}}
+    calc();});
+  list.addEventListener('change',function(e){if(e.target.dataset.k==='box'){list.dispatchEvent(new Event('input'));}});
+  list.addEventListener('click',function(e){var d=e.target.closest('[data-del]');if(!d)return;items=items.filter(function(x){return x.id!==+d.dataset.del});draw();});
+  dlg.addEventListener('click',function(e){var b=e.target.closest('[data-add]');if(b)add(b.dataset.add);});
+  add('box');
 }
 function modalHTML(kind){
   var e=X.esc;
@@ -443,13 +722,13 @@ function detail(id){
   var i=G.parts.findIndex(function(p){return p.id===id}),p=G.parts[i],nx=G.parts[i+1],h='';
   h+='<a class="home-link" href="#">← 처음 화면</a><div class="vh"><span class="kicker">'+ROMAN[i]+' · '+p.fr+'</span><h1>'+X.esc(p.title)+'</h1><p>'+X.esc(p.lead).replace(/\n/g,'<br>')+'</p></div>';
   if(id==='visit'){ h+=steps(p); }
-  else if(id==='pack'){ h+='<button class="carrier-card" type="button" data-modal="carrier"><span class="ci2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V3.5h6V6M9 20v1.5M15 20v1.5M10 10v6M14 10v6"/></svg></span><span><b>캐리어로 보내시나요?</b><span class="d">그대로 가져와 노란 포스트잇만 붙이면 돼요 · 포장은 무료</span></span><span class="ar" aria-hidden="true">→</span></button>'+steps(p)+offer(p.offer)+coffee(p.coffee); }
+  else if(id==='pack'){ h+='<button class="carrier-card" type="button" data-modal="carrier"><span class="ci2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V3.5h6V6M9 20v1.5M15 20v1.5M10 10v6M14 10v6"/></svg></span><span><b>캐리어로 보내시나요?</b><span class="d">그대로 가져와 노란 포스트잇만 붙이면 돼요 · 포장은 무료</span></span><span class="ar" aria-hidden="true">→</span></button>'+steps(p)+offer(p.offer)+perksHTML()+coffee(p.coffee)+evDialog(); }
   else {
-    h+=checklist('bl','나가기 전에 확인',p.steps,'#ED2939','#FDF1F1')+X.pay();
+    h+=checklist('bl','나가기 전에 확인',p.steps,'#ED2939','#FDF1F1')+X.pay()+evDialog();
     h+='<div class="bye"><span class="logo" aria-hidden="true">gofrance</span><b>오늘도 고프랑을 이용해 주셔서 감사해요</b><p>짐은 저희가 한국까지 잘 보내드릴게요. 조심히 들어가세요.</p><span class="fr">Merci et à bientôt !</span></div>';
   }
   if(nx) h+='<a class="next" href="#'+nx.id+'"><span>다음 · '+X.esc(nx.title)+'</span><span>→</span></a>';
-  app.innerHTML='<section class="view">'+h+'</section>'; var slot=app.querySelector('.calc-slot'); if(slot) slot.outerHTML=calcHTML(); var ps=app.querySelector('.perks-slot'); if(ps) ps.outerHTML=perksHTML(); bind(); bindCalc(); X.setNav(id); window.scrollTo(0,0);
+  app.innerHTML='<section class="view">'+h+'</section>'; var slot=app.querySelector('.calc-slot'); if(slot) slot.outerHTML=calcHTML(); var ps=app.querySelector('.perks-slot'); if(ps) ps.outerHTML=perksHTML(); bind(); bindCalc(); bindEv(); X.setNav(id); window.scrollTo(0,0);
 }
 function go(){var h=location.hash.slice(1); if(!h&&/#$/.test(location.href)&&history.replaceState){history.replaceState(null,'',location.pathname+location.search)} if(G.parts.some(function(p){return p.id===h})) detail(h); else home();}
 window.addEventListener('hashchange',go); go();
@@ -457,4 +736,3 @@ window.addEventListener('hashchange',go); go();
 </script>
 </body>
 </html>
-

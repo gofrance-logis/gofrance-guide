@@ -31,8 +31,8 @@ window.GUIDE = {
       steps: [
         { t: "짐에 맞는 박스 고르기", fr: "Choisir un carton", d: "결제 금액은 배송비 + 박스값이에요.", img: "boxsamples", alt: "선반 위 박스 샘플", table: true },
         { t: "박스는 선반, 도구는 카트", fr: "Étagère et chariot", d: "박스는 무게별로 선반에(1–5kg / 6–10kg / 15·20kg), 테이프·가위·매직은 카트에 있어요.", img: "shelf", img2: "cart", alt: "박스 선반", alt2: "포장 도구 카트" },
-        { t: "빈 공간 없이 채우고 단단히 막기", fr: "Caler et fermer", d: "짐이 흔들리지 않게 빈 곳 없이 채워 주세요.\n재활용 박스라면 예전 송장은 떼어 주세요." },
-        { t: "계측하고 노란 포스트잇 쓰기", fr: "Mesurer, puis le post-it jaune", d: "저울로 무게를, 줄자로 가로·세로·높이를 재고, 포스트잇에 적어 박스 위에 붙여 주세요. 사진을 찍어 카톡으로 보내주시면 돼요.", perks: true, postit: true, calc: true }
+        { t: "빈 공간 없이 채우고 단단히 막기", fr: "Caler et fermer", d: "짐이 흔들리지 않게 빈 곳 없이 채워 주세요.\n재활용 박스라면 예전 송장은 떼어 주세요.", flat: true },
+        { t: "계측하고 노란 포스트잇 쓰기", fr: "Mesurer, puis le post-it jaune", d: "저울로 무게를, 줄자로 가로·세로·높이를 재 주세요.\n포장한 뒤 가장 튀어나온 곳까지 재면 돼요.\n잰 숫자를 노란 포스트잇에 적어 박스 위에 붙여 주세요.", postit: true, send: true }
       ],
       offer: { t: "셀프존 무료 제공", fr: "Offert", list: ["물 · 1인 1병, 냉장고에 있어요", "충전기·선풍기 · 자유롭게 쓰셔도 돼요", "화장실 · 사무실에서 나와 왼쪽 코너 “Privée” 문, 열쇠는 벽에 걸려 있어요"] },
       coffee: { t: "15kg 이상 보내셨다면, 커피 한 잔", d: "실제 저울 무게 15kg 이상 박스를 보내신 고객님께 커피값을 지원해 드려요.", steps: ["사무실의 고카페 포스트잇에 짧은 후기 쓰기", "근처 카페에서 음료와 포스트잇을 한 장에 찍기", "카톡으로 사진 보내기"], link: "https://gofrance-logis.github.io/gofrance-plus/", linkT: "이벤트 자세히 보기", modal: "cafe" }
@@ -41,7 +41,7 @@ window.GUIDE = {
       id: "exit", nav: "마무리", fr: "Avant de partir", title: "마무리하는 법", lead: "네 가지를 확인해 주시면 모든 과정이 마무리됩니다.",
       check: "before-leave",
       steps: [
-        { t: "포스트잇 붙이고 사진을 카톡으로 보냈어요", fr: "Photo envoyée", d: "사진을 받으면 실측 후 배송비를 보내드려요.", kakao: true },
+        { t: "포스트잇 붙이고 사진을 카톡으로 보냈어요", fr: "Photo envoyée", d: "사진을 받으면 실측 후 고프랑 청구서를 보내드려요.", kakao: true, events: true },
         { t: "박스는 작업대 아래에 두었어요", fr: "Sous la table", d: "직원이 수거해서 실측해요." },
         { t: "문을 잠그고 열쇠는 간판 뒤에 다시 넣었어요", fr: "Clé derrière le panneau", d: "사무실 문을 잠근 뒤, 열쇠는 처음 꺼내신 간판 뒤에 넣어 주세요.", img: "sign", alt: "열쇠를 다시 넣는 고프랑 간판" },
         { t: "파란 대문은 오른쪽 벽 흰 버튼으로 열어요", fr: "Le bouton à droite", d: "건물 유리문은 안에서 밀고 나오시면 돼요.\n파란 대문은 오른쪽 벽의 흰 버튼을 눌러야 열려요.", img: "exitbutton", alt: "대문 안쪽 오른쪽 벽의 흰 버튼" }
@@ -57,8 +57,9 @@ window.GUIDE = {
   boxSale: [["1·2·3·4·5kg 박스","€3"],["6·7·8·10kg 박스","€3.5"],["15kg 박스","€4"],["20kg 박스","€4.5"],["25kg 이상 특수박스","€8"]],
   heavy: [["25–29kg","€10"],["30–39kg","€25"],["40–49kg","€35"],["50–59kg","€45"],["60–69kg","€55"]],
   carrier: [[10,78],[11,84.5],[12,91],[13,97.5],[14,104],[15,110.5],[16,117],[17,123.5],[18,130],[19,136.5],[20,143],[21,149.5],[22,156],[23,162.5],[24,169],[25,175.5],[26,182],[27,188.5],[28,195],[29,201.5],[30,208],[31,214.5],[32,221],[33,227.5],[34,234],[35,240.5],[36,247],[37,253.5],[38,260],[39,266.5],[40,273],[41,279.5],[42,286]],
-  cafe: { target: "파리 사무실을 방문해 15kg 이상 귀국짐을 보낸 고객님", steps: [["포스트잇 챙기기","사무실에 있는 고카페 포스트잇에 짧은 후기를 적어요"],["인증샷 찍기","카페에서 주문한 음료(음식)와 포스트잇을 한 장에"],["카톡 보내기","받고 싶은 지급 방법과 함께 사진을 보내요"],["혜택 받기","€6(약 1만 원)을 선택한 방법으로 드려요"]], payout: "계좌 송금 · 트래블월렛 · 트래블로그 · 쏠트래블 · 배송비 차감", note: "박스 개수와 상관없이 고객님 한 분께 한 번 보내드려요.\n음료와 포스트잇이 한 사진에 함께 나오게 찍어 주시면 바로 확인해 드릴게요." },
-  pay: [["한화 송금 (당일 구매환율)","우리은행 1005-603-190807 · (주)고프랑인터내셔널"],["유로 송금","카톡으로 계좌 안내를 요청해 주세요"],["앱 송금","트래블월렛 · 트래블로그 · 쏠트래블"]]
+  cafe: { target: "파리 사무실을 방문해 15kg 이상 박스를 보낸 고객님", steps: [["포스트잇 챙기기","사무실에 있는 고카페 포스트잇에 짧은 후기를 적어요"],["인증샷 찍기","카페에서 주문한 음료(음식)와 포스트잇을 한 장에"],["카톡 보내기","받고 싶은 지급 방법과 함께 사진을 보내요"],["혜택 받기","€6(약 1만 원)을 선택한 방법으로 드려요"]], payout: "계좌 송금 · 트래블월렛 · 트래블로그 · 쏠트래블 · 배송비 차감", note: "박스 개수와 상관없이 고객님 한 분께 한 번 보내드려요.\n음료와 포스트잇이 한 사진에 함께 나오게 찍어 주시면 바로 확인해 드릴게요." },
+  pay: [["한화 송금","당일 구매환율 기준"],["유로 송금","유로 계좌로 송금"],["앱 송금","트래블월렛 · 트래블로그 · 쏠트래블"]],
+  payNote: "계좌번호는 고프랑 청구서에 적혀 있어요. 청구서를 받은 뒤 결제해 주세요.\n계좌 안내가 따로 필요하시면 카톡으로 요청해 주세요.",
 };
 
 /* 공통 조각: 표, 부피무게, 포스트잇, 하단 메뉴, 위로가기 */
@@ -96,17 +97,19 @@ window.GX = (function(){
     return '<div class="postit" aria-label="캐리어 포스트잇 작성 예시"><span class="ex">캐리어 예시</span><b>국제배송 · 캐리어</b><dl><dt>이름</dt><dd>홍길동</dd><dt>크기</dt><dd>가로·세로·높이 (cm)<br><span class="e">예) 48·30·76</span></dd><dt>무게</dt><dd>잰 무게<br><span class="e">예) 21.3 kg</span></dd><dt>결제</dt><dd>한화 · 유로 · 앱 송금 중 하나</dd></dl></div>';
   }
   function postit(){
-    return '<figure class="pfig"><div class="postits">'+postitBox()+postitCarrier()+'</div><figcaption>예시 그대로 적지 말고, 내 박스·무게·결제 방법을 적어 주세요.</figcaption><div class="appay"><b>앱 송금</b><span>트래블월렛 · 트래블로그 · 쏠트래블</span></div></figure>';
+    return '<figure class="pfig"><div class="postits">'+postitBox()+'</div><figcaption>예시 그대로 적지 말고, 내 박스·무게·결제 방법을 적어 주세요.</figcaption><div class="appay"><b>앱 송금</b><span>트래블월렛 · 트래블로그 · 쏠트래블</span></div></figure>';
   }
+  function flat(){ return '<div class="flatbox"><b>박스는 모양대로 반듯하게</b><p>위·아래·옆이 불룩하게 튀어나오면 그만큼 크기가 커져서 부피무게가 달라져요.<br>튀어나온 곳 없이 반듯하게 포장해 주세요.</p><div class="flat-ex"><span>예) 5kg 박스 40·27·22cm</span><span>뚜껑이 6cm 불룩해지면 40·27·28cm</span><strong>부피무게 6.1kg → 7kg 요금</strong><strong>배송비 €43 → €55</strong></div></div>'; }
+  function send(){ return '<div class="sendk"><span class="sendk-i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h3l1.6-2.2h6.8L17 8h3v11H4z"/><circle cx="12" cy="13.2" r="3.4"/></svg></span><div><b>다 붙였으면 사진 찍어 카톡으로 보내 주세요</b><p>검수·계측 후 고프랑 청구서를 보내드려요.<br>결제는 청구서를 받은 뒤에 해 주세요.</p></div></div>'; }
   function code(s){ return s.code ? '<div class="code"><span class="ct">'+esc(s.codeT)+'</span><span class="slot">'+esc(s.code)+'</span></div>' : ""; }
-  function extras(s){ return code(s)+(s.table?table():"")+(s.volume?volume():"")+(s.postit?postit():"")+(s.perks?'<div class="perks-slot"></div>':"")+(s.calc?'<div class="calc-slot"></div>':""); }
+  function extras(s){ return code(s)+(s.table?table():"")+(s.volume?volume():"")+(s.flat?flat():"")+(s.postit?postit():"")+(s.send?send():"")+(s.calc?'<div class="calc-slot"></div>':"")+(s.perks?'<div class="perks-slot"></div>':""); }
   function after(p){
     if(!p.after) return "";
     var a=p.after, body = a.list ? '<ul>'+a.list.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>' : '<p>'+esc(a.d)+'</p>';
     return '<div class="after"><h3>'+esc(a.t)+'</h3>'+body+(a.link?'<a href="'+a.link+'" target="_blank" rel="noopener">'+esc(a.linkT)+'</a>':'')+'</div>';
   }
   function pay(){
-    return '<div class="after pay"><h3>결제 방법</h3>'+G.pay.map(function(p){return '<div><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>';}).join("")+'</div>';
+    return '<div class="after pay"><h3>결제 방법</h3><p class="paynote">'+esc(G.payNote||'').replace(/\n/g,'<br>')+'</p>'+G.pay.map(function(p){return '<div><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>';}).join("")+'</div>';
   }
   var ICON = {
     visit:'<path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-7h6v7"/>',
